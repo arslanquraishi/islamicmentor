@@ -26,7 +26,7 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    /* align-items: flex-start; */
+    align-items: center;
 }
 .flex-row{
     display: flex;
@@ -255,20 +255,34 @@ span{
 .course img {
     object-fit: cover;
     width: 95%;
-    height: 70%;
+    height: 50%;
     border-radius: 10px;
     margin: 5px;
-    box-shadow: inset 0px 0px 5px 3px rgb(0, 0, 0);
 }
+
+.course:hover{
+    transform: scale(1.1);
+}
+
+
 .course{
+    /* align-items: center; */
     justify-content:space-evenly;
+    transition: .5s ease;
 }
 .course p{
     font-size: 2.2rem;
     color:var(--black-color);
     text-align: center;
-    
 }
+.course span{
+    font-size:12px;
+    color:black ;
+    width: 89%;
+    text-align: center;
+}
+
+
 #courses h5{
     text-align: center;
     /* font-size: 70px; */
@@ -345,8 +359,8 @@ span{
 .gallery{
     gap:7px;
     flex-wrap: wrap;
-
 }
+
 
 .gallery img {
     border: 7px solid rgba(0, 22, 51, 0.103);
@@ -355,7 +369,14 @@ span{
     min-width:220px; /* Ensures images are adjusted to the height of the container */
     object-fit: cover; /* Images cover the area, may be cropped */
     border-radius: 16px;/* Optional: To give images rounded corners */
+    transition: all 500ms;
 }
+
+.gallery img:hover{
+    transform: scale(1.4);
+}
+
+
 /* .small-second{
     width: 200%;
     height: 20px;
