@@ -249,7 +249,7 @@ span{
     border-radius: 10px;
     background-color:var(--white-color);
     box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.411);
-    outline: 2px solid rgba(255, 255, 255, 0.418);
+    /* outline: 2px solid rgba(255, 255, 255, 0.418); */
 
 }
 .course img {
@@ -258,8 +258,11 @@ span{
     height: 70%;
     border-radius: 10px;
     margin: 5px;
+    box-shadow: inset 0px 0px 5px 3px rgb(0, 0, 0);
 }
-
+.course{
+    justify-content:space-evenly;
+}
 .course p{
     font-size: 2.2rem;
     color:var(--black-color);
@@ -271,6 +274,12 @@ span{
     /* font-size: 70px; */
     color: green;
     /* margin-top: 60px; */
+}
+#courses .bx{
+    text-align: center;
+    font-size: 3rem;
+    margin: 10px;
+    color: #000000;
 }
 
 
