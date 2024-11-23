@@ -154,7 +154,7 @@ body{
 }
 .home img {
     width:35vw;
-    min-width: 300px;
+    min-width: 370px;
 }
 .home-content h3{
     font-size: 3.2rem;
@@ -776,7 +776,7 @@ section{
 }
 
 #home-first-img{
-    max-width:200px;
+    min-width: 300px;
     
 }
 
