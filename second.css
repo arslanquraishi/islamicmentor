@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    font-family: poppins, sans-serif;
+}
+
+:root{
+    --bg-color:linear-gradient(rgb(255, 255, 255), rgb(250, 254, 255), rgb(183, 214, 243) 89%);
+    --green-gradiant-color:linear-gradient(rgb(255, 255, 255),  rgba(162, 216, 166, 0.87) 89%);
+    --second-bg-color:#004d99;
+    --green-color:#00a808;
+    --black-color:rgb(0, 0, 0);
+    --white-color:white;
+}
+
+
+/* ================flexible all section with one class row & colunm ==================== */
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: flex-start;
+}
+.flex-row{
+    display: flex;
+    flex-direction:row ;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h5{
+    /* margin-bottom: 20px; */
+    font-size: 60px;
+    /* text-align: center; */
+}
+
+section{
+    padding: 12rem 9% 2rem;
+}
+
+
+/* .second-btn{
+    padding: .6rem 1.2rem;
+    margin: 15px 0;
+    background: var(--green-color);
+    border-radius: 4rem;
+    color: var(--white-color);
+    box-shadow: 0 0 1rem var(--green-color);
+    letter-spacing: .1rem;
+    font-weight: 700;
+    font-size: 12px;
+    transition: 500ms;
+} */
+
+/* =================== header==================== */
+
+html{
+    font-size:62.5%;
+}
+body{
+    background-color:var(--bg-color);
+    color: var(--second-bg-color);
+    display: flex;
+}
+
+
+.slider {
+    overflow: hidden;
+    white-space:nowrap;
+    width: 50%;
+    max-width: 200px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#slider {
+    display: inline-block;
+    padding-left: 0%;
+    animation: slideAnimation 20s 0ms linear infinite  ;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.header img{
+    width: 70%;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding:1rem 9%;
+    background:var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header img{
+    width: 70%;
+}
+.header.sticky {
+    border-bottom: .1rem solid rgba(0,0,0,.2);
+}
+.logo{
+     font-size: 2.5rem;
+     color:var(--text-color);
+     font-weight: 600;
+     cursor:default;
+}
+.navbar a{
+    font-size: 1.3rem;
+    /* padding:; */
+    color: var(--second-bg-color);
+    margin-left:4rem;
+    transition:300ms;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: var(--green-color);
+
+}
+#menu-icon{
+     font-size:3.6rem;
+     color: var(--second-bg-color);
+     display:none;
+}
+
+/* ============= COURSES DETAILS ============ */
+.qaida-o-nazra-sec{
+    width: 100vw;
+    height:60vh ;
+    background-color: #1b3f63;
+    position: relative;
+}
+.qaida-o-nazra{
+    height: 100vh;
+    position: absolute;
+    top: 9px;
+    left: px;
+}
+.qaida-o-nazra p{
+    font-size: 1.6rem;
+    font-weight: lighter;
+
+}
+.first-detail{
+    /* position: relative; */
+    width: 60%;
+    color: white;
+}
+.first-detail h1{
+    font-size: 4rem;
+}
+
+.second-detail{
+    margin-top: 90px;
+    color: black;
+    border: 2px groove rgba(0, 0, 0, 0.24);
+    padding:30px;
+}
+
+.course-detail{
+    /* position: absolute; */
+    margin: 3%;
+    height: 60%;
+    width: 25%;
+    /* left: 9px; */
+    /* top: 38px; */
+    background-color: white;
+    border: 2px solid white;
+    outline: 1px solid rgba(0, 0, 0, 0.199);
+    
+}
+.course-detail img{
+    width: 100%;
+    height:100;
+}

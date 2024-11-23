@@ -24,7 +24,7 @@
 .flex-column{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
     align-items: center;
 }
@@ -37,13 +37,13 @@
 }
 
 h5{
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     font-size: 60px;
     /* text-align: center; */
 }
 
 section{
-    padding: 15rem 9% 2rem;
+    padding: 12rem 9% 2rem;
 }
 
 
@@ -102,22 +102,25 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding:2.5rem 9%;
+    padding:1rem 9%;
     background:var(--bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
+.header img{
+    width: 70%;
+}
 .header.sticky {
     border-bottom: .1rem solid rgba(0,0,0,.2);
 }
-.logo{
+/* .logo{
      font-size: 2.5rem;
      color:var(--text-color);
      font-weight: 600;
      cursor:default;
-}
+} */
 .navbar a{
     font-size: 1.3rem;
     /* padding:; */
@@ -271,7 +274,8 @@ span{
     transition: .5s ease;
 }
 .course p{
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+    font-weight:550;
     color:var(--black-color);
     text-align: center;
 }
@@ -284,7 +288,7 @@ span{
 
 
 #courses h5{
-    text-align: center;
+    /* text-align: center; */
     /* font-size: 70px; */
     color: green;
     /* margin-top: 60px; */
@@ -299,8 +303,9 @@ span{
 
 /* ======================== sugestion ============================ */
 
-.sugest{
+.sugest-section{
     align-items: center;
+    padding: 9% 0%;
 }
 
 .sugest-row{
@@ -322,16 +327,16 @@ span{
     text-align: center;
     margin-bottom: 30px;
 }
-.sugest h2{
+.sugest-section h2{
     font-size: 60px;
     font-weight:9px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow',  sans-serif;
 }
-.sugest h3{
+.sugest-section h3{
     font-size: 20px;
 }
 
-.sugest p{
+.sugest-section p{
     color: rgb(83, 83, 83);
     font-size: 15px;
     
