@@ -599,8 +599,8 @@ section{
     display: block;
     white-space: nowrap;
     margin: 0 33px;
-    width:90%;
-    max-width:90%;
+    width:95%;
+    max-width:95%;
     padding: 10px;
     font-size: 15px;
     font-weight: 400;
@@ -611,12 +611,12 @@ section{
 #slider {
     display: inline-block;
     
-    animation: slideAnimation 30s linear infinite;
+    animation: slideAnimation 20s linear infinite;
 }
 
 @keyframes slideAnimation {
     0% {
-        transform: translateX(0%);
+        transform: translateX(25%);
     }
     100% {
         transform: translateX(-100%);
@@ -633,7 +633,7 @@ section{
 
 }
 .header img{
-    width: 50%;
+    width: 90%;
 }
 
  #home-first-img{
