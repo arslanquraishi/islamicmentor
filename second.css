@@ -145,67 +145,23 @@ body{
         transform: translateX(-100%);
     }
 }
-.header img{
-    width: 70%;
-}
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding:1rem 9%;
-    background:var(--bg-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-.header img{
-    width: 70%;
-}
-.header.sticky {
-    border-bottom: .1rem solid rgba(0,0,0,.2);
-}
-.logo{
-     font-size: 2.5rem;
-     color:var(--text-color);
-     font-weight: 600;
-     cursor:default;
-}
-.navbar a{
-    font-size: 1.3rem;
-    /* padding:; */
-    color: var(--second-bg-color);
-    margin-left:4rem;
-    transition:300ms;
-}
-.navbar a:hover,
-.navbar a.active{
-    color: var(--green-color);
-
-}
-#menu-icon{
-     font-size:3.6rem;
-     color: var(--second-bg-color);
-     display:none;
-}
 
 /* ============= COURSES DETAILS ============ */
 .qaida-o-nazra-sec{
     width: 100vw;
-    height:55vh ;
     background-color: #13283d;
-    position: relative;
+    /* position: relative; */
 }
+
 .qaida-o-nazra{
     height: 100vh;
-    position: absolute;
     top: 50px;
-    /* left: px; */
 }
 .first-detail{
-    /* position: relative; */
+    margin:20px 0;;
+    padding: 30px 0;
     width: 60%;
+    min-width: 300px;
     color: white;
 }
 .first-detail h1{
@@ -214,15 +170,18 @@ body{
 }
 .first-detail p {
     font-size: 12px;
-    line-height:1.2;
+    line-height:1.4;
     font-weight: 200;
 }
 
 .second-detail{
-    margin-top: 90px;
+    margin:20px 0;
     color: black;
+    background-color: aliceblue;
     border: 2px groove rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
     padding:30px;
+
 }
 
 .second-detail h1{
@@ -243,9 +202,11 @@ body{
 }
 
 .course-detail{
-    /* position: absolute; */
-    margin-right:15%;
-    width: 25%;
+    position:absolute ;
+    top: 120px;
+    right:120px;
+    width: 26%;
+    min-width: 300px;
     padding-bottom: 25px;
     background-color: white;
     border: 2px solid white;
@@ -253,9 +214,10 @@ body{
     
 }
 
+
+
 .course-detail img{
     width: 100%;
-    height:100;
 }
 .course-detail h1{
     margin: 5px 10px;
@@ -299,3 +261,31 @@ body{
     margin-right: 4px;
 }
 
+/* @media(min-width:500px){
+
+} */
+
+@media(max-width:500px){
+.course-detail{
+    position:static;
+}
+
+.flex-column{
+    align-items: center;
+}
+
+.first-detail h1{
+    text-align: center;
+    font-size: 3.3rem;
+    line-height: 1;
+    font-weight: 500;
+}
+.first-detail p {
+    text-align: justify;
+    font-size: 12px;
+    line-height:1.4;
+    font-weight: 200;
+}
+
+
+}

@@ -199,7 +199,20 @@ span{
     align-items: flex-start;
 }
 
+.home-content pre{
+    font-size: 28px;
+    font-weight: 520;
+    color: #00b11d;
+    /* opacity: (0); */
+    animation: pr 1000ms infinite 2ms all;
+}
 
+
+@keyframes pr{
+    0% {opacity: 100%};
+    50% {opacity: 0%};
+    100% {opacity: 100%};
+}
 
 
 
@@ -236,11 +249,11 @@ span{
   }
   
   .btn:focus {
-    box-shadow: #3ce052 0 0 0 1.5px inset, rgba(35, 66, 49, 0.4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    box-shadow: #3ce052 0 0 0 1.5px inset, rgba(35, 66, 49, 0.4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #4fe03c 0 -3px 0 inset;
   }
   
   .btn:hover {
-    box-shadow: rgba(35, 66, 42, 0.4) 0 4px 8px, rgba(35, 66, 44, 0.3) 0 7px 13px -3px, #3ce073 0 -3px 0 inset;
+    box-shadow: rgba(35, 66, 42, 0.4) 0 4px 8px, rgba(35, 66, 44, 0.3) 0 7px 13px -3px, #1e803f 0 -3px 0 inset;
     transform: translateY(-2px);
   }
   
@@ -542,6 +555,90 @@ span{
 
 
 
+/*=============================== Footer Styles ===========================================*/
+.main-footer {
+    background-color: #2c2c2c;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+  }
+  
+  .footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f0a500;
+    padding-bottom: 5px;
+    display: inline-block;
+  }
+  
+  .footer-section p,
+  .footer-section ul {
+    margin: 10px 0;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #f0a500;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #f0a500;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+  }
+  
+  .footer-section i {
+    margin-right: 8px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
 
 /* ========================== BREAKPOINTS ============================== */
 
@@ -781,3 +878,10 @@ section{
 }
 
 }
+
+
+
+
+
+
+
