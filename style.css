@@ -74,6 +74,7 @@ body{
 
 .slider {
     overflow: hidden;
+    display: none;
     white-space:nowrap;
     width: 50%;
     max-width: 200px;
@@ -592,8 +593,47 @@ section{
     align-items: center;
  }
 
+
+ .slider {
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    margin: 0 33px;
+    width:90%;
+    max-width:90%;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+    /* border: 1px solid #ddd; Optional for clarity */
+}
+
+#slider {
+    display: inline-block;
+    
+    animation: slideAnimation 30s linear infinite;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
  section{
     padding:9rem 9% 11rem;
+}
+.header{
+    padding:1rem 3%;
+
+}
+.header img{
+    width: 50%;
 }
 
  #home-first-img{
