@@ -10,11 +10,40 @@
 <!-- link box icon -->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+
+
+<style>
+ 
+    body{
+        background-color: rgb(224, 234, 255);
+    }
+    #registration{
+        margin-top: 100px;
+        display: flex;
+        background-color: rgb(224, 234, 255);
+        /* display: inline-block; */
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        /* background-color: rgb(238, 237, 237); */
+    }
+    #iframe{
+        width: 100%;
+        height: 100%;
+    }
+
+</style>
+
+
+
+
+
+
 </head>
 
 
 
-<body>
+<body class="flex-column">
     <a id="float-whatsapp" href="https://wa.me/923080026609?text=Hi%20There!">
     <img
       src="https://trickuweb.com/whatsapp.png"
@@ -26,45 +55,47 @@
  
 <!-- header design -->
 <header class="header">
-        <a href="#" class="logo">Islamic Mentor</a>
-        <!-- <div class="slider">Welcome to Islamic Mentor - Across the Globe,
-        </div> -->
+        <a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
+    <div class="slider">
+        <div id="slider">&nbsp;&nbsp;&nbsp;&nbsp;
+            Welcome to Islamic Mentor accross the cloble – Learn Quran and Islam Online! &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        </div>
+    </div>
 
         <i class='bx bx-menu' id="menu-icon" ></i>
 
         <nav class="navbar">
             <a href="index.html#home" >Home</a>
             <a href="index.html#about">About </a>
-            <a href="courses-detail.html">Courses</a>
+            <a href="#courses">Courses</a>
             <a href="index.html#gallery">Gallery</a>
             <a href="index.html#contect">Contect Us</a>
             <a href="registration.html">Registration</a>
-            <a href="article.html">article</a>
-            <a href="download.html">Download</a>
+            <a href="#">article</a>
+            <a href="#">Download</a>
 
 
         </nav>
 </header>
-<div id="registration">
-    <iframe id="iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSc2SrgF-xnLgygmVOMp_uW17ZKOkqaClvxdlPjY3HOKbyMYuQ/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<div id="registration" class="flex-column"> 
+    <!-- <iframe id="iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSc2SrgF-xnLgygmVOMp_uW17ZKOkqaClvxdlPjY3HOKbyMYuQ/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+
+    <iframe src="https://prettyform.addxt.com/a/form/vf/1FAIpQLSd5YWL9hfOAbfac4Sezhb-SdCb9ztMoLO1RJhmh0pGCR8115w" width="1080" height="1240" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+
 </div>
 
 
-<style>
-    #registration{
-        margin-top: 70px;
-        display: inline-block;
-        width: 100vw;
-        height: 2100px;
-        background-color: rgb(238, 237, 237);
-    }
-    #iframe{
-        width: 100%;
-        height: 100%;
-        overflow-y: hidden;
-    }
+<!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd5YWL9hfOAbfac4Sezhb-SdCb9ztMoLO1RJhmh0pGCR8115w/viewform?embedded=true" width="540" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+<!-- 
+<script type="text/javascript" src="https://form.jotform.com/jsform/243277353168462"></script> -->
 
-</style>
-    
+
+
+
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="script.js"></script>
 </body>
 </html>
