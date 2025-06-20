@@ -148,10 +148,20 @@ body{
 }
 
 /* ============= COURSES DETAILS ============ */
+
+.courses-section{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(177, 170, 165);
+}
+
+
 .qaida-o-nazra-sec{
     width: 100vw;
     background-color: #13283d;
-    /* position: relative; */
+    height:390px;
+    padding: 8% 9%;
+    position: relative;
 }
 
 .qaida-o-nazra{
@@ -164,6 +174,7 @@ body{
     width: 60%;
     min-width: 300px;
     color: white;
+    /* position: relative; */
 }
 .first-detail h1{
     font-size: 5rem;
@@ -176,12 +187,14 @@ body{
 }
 
 .second-detail{
-    margin:20px 0;
+    margin:20px 9%;
+    width: 40%;
     color: black;
     background-color: aliceblue;
     border: 2px groove rgba(0, 0, 0, 0.24);
     border-radius: 5px;
     padding:30px;
+    /* position: relative; */
 
 }
 
@@ -203,7 +216,7 @@ body{
 }
 
 .course-detail{
-    position:absolute ;
+    position:absolute;
     top: 120px;
     right:120px;
     width: 26%;
