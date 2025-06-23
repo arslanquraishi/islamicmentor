@@ -573,6 +573,7 @@ span{
 
 
 #float-whatsapp{
+    z-index: 1;
     position: fixed;
     width: 40px;
     height: 40px;
@@ -896,11 +897,10 @@ section{
     width:100%;
 }
 
-/* #float-whatsapp{
-    height: 50px;
-    bottom: 250px;
-    right: 30px;
-} */
+#float-whatsapp{
+    height: 55px;
+    bottom: 100px;
+}
 
 
 
