@@ -479,7 +479,7 @@ span{
 
 /* ======================== Gallery ============================ */
 
-
+/* 
 #gallery{
     background-image: url("images/body-bg.jpg");
     background-color: rgba(255, 255, 255, 0.644);
@@ -497,23 +497,76 @@ span{
 
 .gallery img {
     border: 7px solid rgba(0, 22, 51, 0.103);
-    width: 22%; /* Each image takes up almost half the container width */
-    /* height: 40%; */
-    min-width:220px; /* Ensures images are adjusted to the height of the container */
-    object-fit: cover; /* Images cover the area, may be cropped */
-    border-radius: 16px;/* Optional: To give images rounded corners */
+    width: 22%; 
+    min-width:220px; 
+    object-fit: cover;
+    border-radius: 16px;
     transition: all 500ms;
 }
 
 .gallery img:hover{
     transform: scale(1.4);
+} */
+
+.gallery-container {
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 
-/* .small-second{
-    width: 200%;
-    height: 20px;
-} */
 
 
 /* ======================== Contect us ============================ */
