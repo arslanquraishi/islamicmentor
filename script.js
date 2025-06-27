@@ -79,3 +79,29 @@ ScrollReveal({
 
 ScrollReveal().reveal('.home-content, .heading', { origin: top });
 ScrollReveal().reveal('.home-img, .')
+
+
+
+
+
+
+
+
+// ======popup+++++++++++++
+ const form = document.getElementById('contact-form');
+  const popup = document.getElementById('popup');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Stop default form submission
+
+    // Show popup
+    popup.style.display = 'block';
+
+    // Hide popup after 3 seconds
+    setTimeout(() => {
+      popup.style.display = 'none';
+      
+      // Now submit the form for real
+      form.submit(); // Let FormSubmit do its job
+    }, 3000); // 3 seconds
+  });
