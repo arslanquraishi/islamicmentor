@@ -1,64 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arslan Quraishi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Resources - Islamic Mentor</title>
 
-<!-- link stylesheet -->
-    <link rel="stylesheet" href="style.css">
-<!-- link box icon -->
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    #downloads {
+      padding: 10rem 5% 6rem;
+      background: linear-gradient(to bottom, #ffffff, #f0f7ff, #d7e8fb);
+    }
+
+    #downloads .heading {
+      font-size: 5rem;
+      color: #004d99;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    #downloads .heading span {
+      color: #00a808;
+    }
+
+    .downloads-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .download-card {
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .download-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .download-card i {
+      font-size: 4rem;
+      color: #004d99;
+      margin-bottom: 10px;
+    }
+
+    .download-card p {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: black;
+      margin-bottom: 5px;
+    }
+
+    .download-card span {
+      display: block;
+      font-size: 1.3rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .download-card .btn {
+      margin: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .download-card {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 
-
-
 <body>
-    <a id="float-whatsapp" href="https://wa.me/923080026609?text=Hi%20There!">
-    <img
-      src="https://trickuweb.com/whatsapp.png"
-      alt=""
-      height="60px"
-      width="60px"
-    />
-    </a>
- 
-<!-- header design -->
-<header class="header">
-        <a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
+  <header class="header">
+    <a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
     <div class="slider">
-        <div id="slider">&nbsp;&nbsp;&nbsp;&nbsp;
-            Welcome to Islamic Mentor accross the cloble – Learn Quran and Islam Online! &nbsp;&nbsp;&nbsp;&nbsp;
-        
-        </div>
+      <div id="slider">&nbsp;&nbsp;Welcome to Islamic Mentor – Learn Quran and Islam Online!&nbsp;&nbsp;</div>
     </div>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#courses">Courses</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#contect">Contact</a>
+      <a href="registration.html">Registration</a>
+      <a href="#">Article</a>
+      <a href="#downloads">Download</a>
+    </nav>
+  </header>
 
-        <i class='bx bx-menu' id="menu-icon" ></i>
+  <section id="downloads">
+    <h2 class="heading">Download <span>Resources</span></h2>
 
-        <nav class="navbar">
-            <a href="index.html#home" >Home</a>
-            <a href="index.html#about">About </a>
-            <a href="#courses">Courses</a>
-            <a href="index.html#gallery">Gallery</a>
-            <a href="index.html#contect">Contect Us</a>
-            <a href="registration.html">Registration</a>
-            <a href="#">article</a>
-            <a href="#">Download</a>
+    <div class="downloads-row">
 
+      <!-- Qaida Book -->
+      <div class="download-card">
+        <i class='bx bxs-book-alt'></i>
+        <p>Qaida for Beginners</p>
+        <span>Basic Qaida book with Tajweed rules</span>
+        <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" class="btn" download>Download</a>
+        <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" class="btn" target="_blank">Read Online</a>
+      </div>
 
-        </nav>
-</header>
+      <!-- Farz Uloom Book -->
+      <div class="download-card">
+        <i class='bx bxs-book'></i>
+        <p>Farz Uloom Book</p>
+        <span>Learn essential Islamic beliefs and duties</span>
+        <a href="pdfs/farz-uloom.pdf" class="btn" download>Download</a>
+        <a href="pdfs/farz-uloom.pdf" class="btn" target="_blank">Read Online</a>
+      </div>
 
+      <!-- Arabic Grammar Book -->
+      <div class="download-card">
+        <i class='bx bx-book-reader'></i>
+        <p>Arabic Grammar</p>
+        <span>Nahw & Sarf rules to understand Quran</span>
+        <a href="pdfs/arabic-grammar.pdf" class="btn" download>Download</a>
+        <a href="pdfs/arabic-grammar.pdf" class="btn" target="_blank">Read Online</a>
+      </div>
 
+      <!-- Quran & Hadith Book -->
+      <div class="download-card">
+        <i class='bx bxs-book-heart'></i>
+        <p>Quran & Hadith</p>
+        <span>Understand message of Islam deeply</span>
+        <a href="pdfs/quran-hadith.pdf" class="btn" download>Download</a>
+        <a href="pdfs/quran-hadith.pdf" class="btn" target="_blank">Read Online</a>
+      </div>
 
+    </div>
+  </section>
 
-
-
-
-
-
-
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
 </body>
+
+</html>
