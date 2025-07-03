@@ -177,28 +177,27 @@
 
 
 
+<!-- =================  Gallery ========================= -->
 
-<section class="gallery flex-row" id="gallery">
+<section class="gallery-section" id="gallery">
   <div class="gallery-container">
     <h2 class="heading">Our <span>Gallery</span></h2>
-    <div class="gallery-grid">
+    <div class="gallery-flex">
       <img src="https://shorturl.at/k4Zew" alt="Gallery 1" class="gallery-img">
       <img src="https://shorturl.at/3JRUk" alt="Gallery 2" class="gallery-img">
       <img src="https://shorturl.at/RRH9Y" alt="Gallery 3" class="gallery-img">
       <img src="https://shorturl.at/6IEkO" alt="Gallery 4" class="gallery-img">
-      <img src="images//kids1.jpg" alt="Gallery 5" class="gallery-img">
-      <img src="images//teacher.jpg" alt="Gallery 6" class="gallery-img">
+      <img src="images/kids1.jpg" alt="Gallery 5" class="gallery-img">
+      <img src="images/teacher.jpg" alt="Gallery 6" class="gallery-img">
     </div>
   </div>
 
   <!-- Lightbox -->
   <div id="lightbox" class="lightbox">
-    <span class="close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img">
+    <span id="close-btn" class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Lightbox Image">
   </div>
 </section>
-
-    
 
 
     <!--  Contact Us section design -->
@@ -310,6 +309,40 @@
     </div>
 <!--============ scroll reveel  ================-->
 <script src="https://unpkg.com/scrollreveal"></script>
+
+
+
+
+<script>
+
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.getElementById("close-btn");
+  const galleryImages = document.querySelectorAll(".gallery-img");
+
+  galleryImages.forEach((img) => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+    document.body.style.overflow = "auto";
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  });
+</script>
+
+
+
 
     <script src="script.js"></script>
 </body>
