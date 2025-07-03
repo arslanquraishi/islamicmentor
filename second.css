@@ -169,7 +169,7 @@ body{
     top: 50px;
 }
 .first-detail{
-    margin:20px 0;;
+    margin:20px 0;
     padding: 30px 0;
     width: 60%;
     min-width: 300px;
@@ -185,6 +185,9 @@ body{
     line-height:1.4;
     font-weight: 200;
 }
+
+
+/* =========== Second Detail Start ================ */
 
 .second-detail{
     margin:20px 9%;
@@ -214,6 +217,8 @@ body{
     font-weight: 300;
     color: #000000ad;
 }
+
+/* ========== Third Detail Start  ============== */
 
 .course-detail{
     position:absolute;
@@ -275,6 +280,12 @@ body{
     margin-right: 4px;
 }
 
+
+
+
+
+
+
 /* @media(min-width:500px){
 
 } */
@@ -300,6 +311,13 @@ body{
     line-height:1.4;
     font-weight: 200;
 }
+}
 
+
+@media (max-width:1200px){
+   .course-detail{
+    display: none;
+
+   }
 
 }
