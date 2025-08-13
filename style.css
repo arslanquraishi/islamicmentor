@@ -169,9 +169,19 @@ body{
 }
 
 .logo{
-    width: 12%;
+    width:6%;
     min-width:80px;
-     cursor:default;
+    cursor:default;
+    cursor: pointer;
+     
+}
+.logo-text{
+    cursor: pointer;
+    line-height:0.9;
+    font-size:1.7rem;
+    color: #396394;
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 /* ======================= home section================== */
