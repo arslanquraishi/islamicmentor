@@ -169,8 +169,8 @@ body{
 }
 
 .logo{
-    width:6%;
-    min-width:80px;
+    width:5%;
+    min-width:70px;
     cursor:default;
     cursor: pointer;
      
@@ -178,7 +178,7 @@ body{
 .logo-text{
     cursor: pointer;
     line-height:0.9;
-    font-size:1.7rem;
+    font-size:1.4rem;
     color: #396394;
     font-weight:bold;
     font-family: Arial, Helvetica, sans-serif
@@ -738,6 +738,31 @@ span{
 
 /* ==================== Footer Responsive ======================= */
 @media (max-width: 768px) {
+.logo{
+    width:30%;
+    min-width:54px;
+    cursor:default;
+    cursor: pointer;
+    flex-direction: row !important;
+}
+.logo img{
+    display: inline-block;
+    width: 39px;
+}
+.logo-text{
+    cursor: pointer;
+    line-height:0.9;
+    font-size:1.3rem;
+    color: #396394;
+    font-weight:700;
+    font-family:Helvetica, sans-serif
+}
+
+/* .header{
+    padding:1.5rem 3% !important;
+} */
+
+
   .footer-container {
     display: flex;
     flex-direction: column !important;
@@ -917,10 +942,6 @@ span{
 section{
     padding:15rem 3% 11rem;
 }
-.header{
-    padding:2.5rem 3%;
-
-}
 
 .about-content{
     width:45vw;}
@@ -938,14 +959,14 @@ section{
     align-items: center;
  }
 
-
+    
  .slider {
     overflow: hidden;
     display: block;
     white-space: nowrap;
-    margin: 0 33px;
-    width:95%;
-    max-width:95%;
+    margin: 0 0 0 23px;
+    width:70%;
+    max-width:40%;
     padding: 10px;
     font-size: 15px;
     font-weight: 400;
@@ -972,14 +993,6 @@ section{
 
  section{
     padding:9rem 9% 11rem;
-}
-.header{
-    padding:1rem 3%;
-
-}
-.header img{
-    width: 95%;
-    margin-left: 11px;
 }
 
  #home-first-img{

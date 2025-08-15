@@ -283,18 +283,16 @@ body{
 
 
 
+/* =================== Media Qeuri  ======================= */
 
-
-
-/* @media(min-width:500px){
-
+@media(max-width:1200px){
+/* .course-detail{
+    position:static;
 } */
 
-@media(max-width:500px){
-.course-detail{
-    position:static;
+.first-detail{
+    width: 80%;
 }
-
 .flex-column{
     align-items: center;
 }
@@ -303,7 +301,7 @@ body{
     text-align: center;
     font-size: 3.3rem;
     line-height: 1;
-    font-weight: 500;
+    font-weight: 1000;
 }
 .first-detail p {
     text-align: justify;
@@ -311,13 +309,55 @@ body{
     line-height:1.4;
     font-weight: 200;
 }
+
+.first-detail h1{
+    font-size: 5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.first-detail p {
+    font-size: 12px;
+    line-height:1.4;
+    font-weight: 200;
+}
+   .course-detail{
+    display: none;
+   }
+
+
+
+.second-detail{
+    margin:20px 9%;
+    width: 40%;
+    min-width: 400px;
+    color: black;
+    background-color: aliceblue;
+    border: 2px groove rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+    padding:30px;
+}
 }
 
 
-@media (max-width:1200px){
-   .course-detail{
-    display: none;
 
-   }
+
+@media (max-width:500px){
+.second-detail{
+    width: 90%;
+    min-width: 300px;
+    margin: auto;
+}
+
+
+
+.first-detail h1{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.first-detail p {
+    font-size: 12px;
+    line-height:1.4;
+    font-weight: 200;
+}
 
 }
