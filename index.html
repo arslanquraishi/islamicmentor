@@ -207,50 +207,40 @@
 </section>
 
 
-    <!--  Contact Us section design -->
-<section class="section contact" id="contect">
-    <h2 class="heading">Contact <span>Us!</span></h2>
-    
-    <form id="contact-form" action="https://formsubmit.co/arslanquraishi999@gmail.com" method="POST">
-        <!-- Hidden optional settings -->
-        <input type="hidden" name="_subject" value="New Contact Form Submission">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <!-- Optional: Redirect to thank you page -->
-        <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html"> -->
+  <!--  Contact Us section design -->
+<section class="section contact" id="contact">
+  <h2 class="heading">Contact <span>Us!</span></h2>
 
-        <div class="input-box">
-            <input class="input" type="text" placeholder="Full Name" name="full_name" id="">
-            <input type="email" placeholder="Email Address" name="email" id="">
-        </div>
-        <div class="input-box">
-            <input type="number" placeholder="Mobile Number" name="mobile" id="">
-            <input type="text" placeholder="Email Subject" name="subject" id="">
-        </div>
-        <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-        <input class="btn" type="submit" value="Send Message">
-    </form>
+  <form id="contact-form" action="https://formsubmit.co/arslanquraishi999@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New Contact Form Submission">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
 
-
-
-<!-- ✅ Success Popup -->
-<div id="popup" style="
-  display: none;
-  background: #e0ffe0;
-  color: #006600;
-  padding: 20px;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  border: 1px solid #00aa00;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 200, 0, 0.3);
-  z-index: 999;
-">
-
-
-
+    <div class="input-box">
+      <input type="text" placeholder="Full Name" name="full_name" required>
+      <input type="email" placeholder="Email Address" name="email" required>
+    </div>
+    <div class="input-box">
+      <input type="number" placeholder="Mobile Number" name="mobile" required>
+      <input type="text" placeholder="Email Subject" name="subject" required>
+    </div>
+    <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+    <input class="btn" type="submit" value="Send Message">
+  </form>
 </section>
+
+<!-- ✅ Modal Box -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h3 id="modal-title">⏳ Sending Message...</h3>
+    <p id="modal-text">Please wait a moment.</p>
+    <button id="modal-btn" style="display:none;" onclick="closeModal()">OK</button>
+  </div>
+</div>
+
+<link rel="stylesheet" href="contact.css">
+<script src="contact.js"></script>
+
 
 
 
@@ -308,11 +298,6 @@
   </div>
 </footer>
 
-
-
-
-
- 
 
 
 

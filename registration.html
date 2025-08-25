@@ -53,6 +53,35 @@
     .form-container button {
       width: 100%;
     }
+
+    /* Thank You Message Style */
+    #thankyouMessage {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      max-width: 700px;
+      width: 100%;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    #thankyouMessage h2 {
+      color: #0077ff;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    #thankyouMessage p {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
   </style>
 </head>
 
@@ -86,8 +115,12 @@
 
 <!-- Registration Section -->
 <section id="registration">
-  <form id="studentForm" class="form-container">
+  <form id="studentForm" class="form-container" action="https://formsubmit.co/arslanquraishi999@gmail.com" method="POST">
     <h2>Student Registration Form</h2>
+
+    <!-- Hidden field to disable captcha -->
+    <input type="hidden" name="_captcha" value="false">
+
     <input type="text" name="fullname" placeholder="Full Name" required />
     <input type="email" name="email" placeholder="Email Address" required />
     <input type="tel" name="phone" placeholder="Phone Number" required />
@@ -104,47 +137,46 @@
 
     <button type="submit" class="btn">Submit</button>
   </form>
+
+  <!-- Thank You Message -->
+  <div id="thankyouMessage">
+    <h2>🎉 Thank You!</h2>
+    <p>Your registration has been submitted successfully.<br> We will contact you soon.</p>
+  </div>
 </section>
-
-<!-- Scripts -->
-<script>
-  document.getElementById("studentForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const form = e.target;
-
-    const data = {
-      fullname: form.fullname.value,
-      email: form.email.value,
-      phone: form.phone.value,
-      course: form.course.value,
-      gender: form.gender.value,
-      address: form.address.value,
-    };
-
-    alert(
-      "Registration Successful!\\n\\n" +
-      "Name: " + data.fullname + "\\n" +
-      "Email: " + data.email + "\\n" +
-      "Phone: " + data.phone + "\\n" +
-      "Course: " + data.course + "\\n" +
-      "Gender: " + data.gender + "\\n" +
-      "Address: " + data.address
-    );
-
-    form.reset();
-  });
-</script>
 
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="script.js"></script>
 <div id="footer"></div>
 
 <script>
+  // Load Footer
   fetch("footer.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;
     });
+
+  // Handle Form Submission with Thank You message
+  document.getElementById("studentForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form)
+    }).then(response => {
+      if (response.ok) {
+        form.style.display = "none"; 
+        document.getElementById("thankyouMessage").style.display = "block";
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    }).catch(error => {
+      alert("Error: " + error);
+    });
+  });
 </script>
 
 </body>

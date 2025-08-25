@@ -107,16 +107,54 @@ if (lightbox && lightboxImg && closeBtn && galleryImages.length > 0) {
 }
 
 // ========== Contact Form Popup ==========
-const form = document.getElementById('contact-form');
-const popup = document.getElementById('popup');
+const form = document.getElementById("contact-form");
+const modal = document.getElementById("modal");
+const modalTitle = document.getElementById("modal-title");
+const modalText = document.getElementById("modal-text");
+const modalBtn = document.getElementById("modal-btn");
 
-if (form && popup) {
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        popup.style.display = 'block';
-        setTimeout(() => {
-            popup.style.display = 'none';
-            form.submit();
-        }, 3000);
-    });
+form.addEventListener("submit", function(e) {
+  e.preventDefault(); // Stop redirect
+
+  // Show modal with "Sending..." state
+  modal.style.display = "flex";
+  modalTitle.textContent = "⏳ Sending Message...";
+  modalText.textContent = "Please wait a moment.";
+  modalBtn.style.display = "none";
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form)
+  })
+  .then(response => {
+    if (response.ok) {
+      // Change modal to success
+      modalTitle.textContent = "✅ Sent Successfully!";
+      modalText.textContent = "We will get back to you soon.";
+      modalBtn.style.display = "inline-block";
+      form.reset();
+
+      // Auto close after 3s
+      setTimeout(closeModal, 3000);
+    } else {
+      modalTitle.textContent = "❌ Failed!";
+      modalText.textContent = "Something went wrong. Try again.";
+      modalBtn.style.display = "inline-block";
+
+      // Auto close after 3s
+      setTimeout(closeModal, 3000);
+    }
+  })
+  .catch(error => {
+    modalTitle.textContent = "⚠️ Error!";
+    modalText.textContent = error;
+    modalBtn.style.display = "inline-block";
+
+    // Auto close after 3s
+    setTimeout(closeModal, 3000);
+  });
+});
+
+function closeModal() {
+  modal.style.display = "none";
 }
