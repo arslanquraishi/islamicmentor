@@ -158,3 +158,6 @@ form.addEventListener("submit", function(e) {
 function closeModal() {
   modal.style.display = "none";
 }
+
+
+
