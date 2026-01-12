@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Islamic Mentor</title>
+<link rel="stylesheet" href="style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<style>
+/* Reset & General */
+* { margin:0; padding:0; box-sizing:border-box; }
+body, html { font-family: Arial, sans-serif; scroll-behavior: smooth; }
+
+/* Full-screen sections */
+.section {
+    width: 100%;
+    height: 100vh; /* full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+    transition: all 0.6s ease-in-out;
+    overflow: hidden;
+}
+
+/* Section backgrounds (some blurred, some solid) */
+.section.bg-blur::before {
+    content: '';
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: url('https://source.unsplash.com/1600x900/?islamic,quran') center/cover no-repeat;
+    filter: blur(8px) brightness(0.6);
+    z-index: -1;
+}
+.section.bg-solid { background-color: #f9f9f9; }
+
+/* Section Content */
+.section h1, .section h2 { text-align: center; color: #2c3e50; margin-bottom: 15px; }
+.section p { font-size: 1.1rem; max-width: 800px; text-align: center; line-height: 1.6; margin-bottom: 20px; color:#555; }
+.section img { max-width: 70%; border-radius: 12px; margin-top: 20px; transition: transform 0.5s ease; }
+.section img:hover { transform: scale(1.05); }
+
+/* Buttons */
+.section button {
+    padding: 12px 30px;
+    background-color: #00b11d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+}
+.section button:hover {
+    background-color: #019214;
+    transform: scale(1.05);
+}
+.main-about-container{
+    width: 100vw;
+    
+}
+
+/* Lists */
+.section ul { list-style: disc; max-width: 600px; margin: 20px auto; text-align:left; color:#555; }
+.section ul li { margin-bottom:10px; font-size:1rem; }
+
+/* Responsive */
+@media (max-width:768px){
+    .section { padding: 20px; }
+    .section p { font-size: 1rem; }
+    .section img { max-width: 90%; }
+}
+
+
+/* //legel style */
+
+.legal-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+
+.legal-container h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.legal-intro {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.legal-container h2 {
+  font-size: 24px;
+  margin-top: 40px;
+  color: #1f6f4a;
+}
+
+.legal-container h3 {
+  font-size: 17px;
+  margin-top: 25px;
+  color: #222;
+}
+
+.legal-container p {
+  font-size: 14.5px;
+  margin-top: 8px;
+}
+
+.legal-container hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 40px 0;
+}
+
+
+
+
+</style>
+
+</head>
+<body class="flex-column">
+
+<!-- Navbar (from your theme CSS) -->
+<header class="header">
+    <a href="#" class="logo flex-row"><img src="favicon/logo.png" alt="logo"><p class="logo-text">Islamic Mentor</p></a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="index.html#home" >Home</a>
+            <a href="index.html#about">About </a>
+            <a href="#courses">Courses</a>
+            <a href="index.html#gallery">Gallery</a>
+            <a href="index.html#contact">Contect Us</a>
+            <a href="registration.html">Registration</a>
+            <a href="#article">article</a>
+            <a href="download.html">Download</a>
+
+        </nav>
+</header>
+<div class="legal-container">
+
+  <h1>Legal Information</h1>
+  <p class="legal-intro">
+    This page outlines the Privacy Policy and Terms & Conditions of Islamic Mentor.
+    By using our website or services, you agree to the policies stated below.
+  </p>
+
+  <hr>
+
+  <h2>Privacy Policy</h2>
+
+  <h3>1. Information We Collect</h3>
+  <p>
+    We may collect personal information including but not limited to your name,
+    email address, phone number, country, and class preferences when you register,
+    contact us, or book a free trial.
+  </p>
+
+  <h3>2. Use of Information</h3>
+  <p>
+    Collected information is used solely for providing online Quran and Islamic
+    education services, managing student records, communication, scheduling classes,
+    and improving our platform. We do not sell or rent user data.
+  </p>
+
+  <h3>3. Data Security</h3>
+  <p>
+    We implement reasonable technical and administrative measures to protect user
+    information. However, no online system is 100% secure, and we cannot guarantee
+    absolute security.
+  </p>
+
+  <h3>4. Cookies & Tracking</h3>
+  <p>
+    Our website may use cookies or similar technologies to enhance functionality and
+    analyze traffic. Users may disable cookies through browser settings.
+  </p>
+
+  <h3>5. Third-Party Services</h3>
+  <p>
+    Online classes may be conducted using third-party platforms such as Zoom or Google
+    Meet. Islamic Mentor is not responsible for the privacy practices of these services.
+  </p>
+
+  <hr>
+
+  <h2>Terms & Conditions</h2>
+
+  <h3>6. Nature of Services</h3>
+  <p>
+    Islamic Mentor provides online Quran reading, Tajweed, Islamic studies, and related
+    educational services for students worldwide. Classes are conducted online only.
+  </p>
+
+  <h3>7. Free Trial Policy</h3>
+  <p>
+    Free trial classes are offered for evaluation purposes only. Islamic Mentor reserves
+    the right to approve, reschedule, or discontinue free trials without prior notice.
+  </p>
+
+  <h3>8. Payments & Refunds</h3>
+  <p>
+    Payment details, fee structures, and schedules are communicated before enrollment.
+    Fees once paid are non-refundable unless explicitly stated otherwise.
+  </p>
+
+  <h3>9. Student Conduct</h3>
+  <p>
+    Students and guardians must maintain respectful behavior during classes.
+    Any misuse, abuse, or inappropriate conduct may result in suspension or termination
+    of services.
+  </p>
+
+  <h3>10. Intellectual Property</h3>
+  <p>
+    All website content, course material, videos, and graphics are the intellectual
+    property of Islamic Mentor and may not be copied, distributed, or reused without
+    written permission.
+  </p>
+
+  <h3>11. Limitation of Liability</h3>
+  <p>
+    Islamic Mentor shall not be held liable for internet disruptions, technical issues,
+    device failures, or third-party service interruptions beyond our control.
+  </p>
+
+  <h3>12. Policy Updates</h3>
+  <p>
+    We reserve the right to modify these policies at any time. Updated versions will be
+    posted on this page and are effective immediately upon publication.
+  </p>
+
+  <h3>13. Contact Information</h3>
+  <p>
+    For legal or policy-related inquiries, please contact us using the details provided
+    on our Contact page.
+  </p>
+
+</div>
+
+
+
+<!--====foooter imprt====== -->
+<div id="footer-wrapper"calass="footer-space-delet">
+  <div id="footer" class="footer-space-delet"></div>
+</div>
+
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+
+
+</body>
+</html>

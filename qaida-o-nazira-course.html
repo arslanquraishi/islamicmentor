@@ -60,7 +60,7 @@
             <a href="index.html#about">About </a>
             <a href="courses-detail.html">Courses</a>
             <a href="index.html#gallery">Gallery</a>
-            <a href="index.html#contect">Contect Us</a>
+            <a href="index.html#contact">Contect Us</a>
             <a href="registration.html">Registration</a>
             <a href="article.html">article</a>
             <a href="download.html">Download</a>
@@ -112,7 +112,18 @@
         </div>
     </div>    
 
-
+<!--============ /// footer //============== -->
+<div id="footer-wrapper"calass="footer-space-delet">
+  <div id="footer" class="footer-space-delet">
+      </div>
+</div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
 
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="script.js"></script>

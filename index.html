@@ -69,9 +69,9 @@
             <a href="index.html#about">About </a>
             <a href="#courses">Courses</a>
             <a href="index.html#gallery">Gallery</a>
-            <a href="index.html#contect">Contect Us</a>
+            <a href="index.html#contact">Contect Us</a>
             <a href="registration.html">Registration</a>
-            <a href="#">article</a>
+            <a href="#article">article</a>
             <a href="download.html">Download</a>
 
         </nav>
@@ -87,18 +87,20 @@
         <img id="home-first-img" src="images/homcover2.png" alt="Loading…">
             <div class="home-content flex-column">
                 
-                    <h3>Learn Quran</h3>
-<h1>Charge Your Eiman</h1>
-<p>Start your Qur’an journey with step-by-step lessons, Tajweed made easy, and live guidance from qualified teachers. Learn to read, understand, and practice the Qur’an—anywhere, on your schedule.</p>
+                <h3>Learn Quran</h3>
+                <h1>Charge Your Iman</h1>
+                <b >Learn Quran with Tajweed, Tafseer & Live Teachers – Anytime, Anywhere.</b>
+                <p>Start your Qur’an journey with step-by-step lessons, Tajweed made easy, and live guidance from qualified teachers. Learn to read, understand, and practice the Qur’an—anywhere, on your schedule.</p>
 
                 <div class="social-media">
                     <a href="https://www.facebook.com/profile.php?id=100095330290152" target="_blank"><i class='bx bxl-facebook' ></i></a>
-                    <a href=""><i class='bx bxl-twitter' ></i></a>
-                    <a href=""><i class='bx bxl-instagram-alt' ></i></a>
-                    <a href=""><i class='bx bxl-linkedin' ></i></a>
+                  <a href="https://wa.me/923161624006" target="_blank"> <i class='bx bxl-whatsapp'></i></a>
+
+                    <a href="https://www.instagram.com/islamicmentor.online?igsh=MWkxOTNqZDRqYzIwdg==" target="_blank"><i class='bx bxl-instagram-alt' ></i></a>
+                    <a href="https://youtube.com/@islamicmentor.online?si=LaV8ZPtUDAKa3I43" target="_blank"><i class='bx bxl-youtube' ></i></a>
                 </div>
-<div class="flex-row pre">
-                <a  href="registration.html" class="btn">Register</a><pre> <--For Free Trail</pre>
+            <div class="flex-row pre">
+                <a  href="registration.html" class="btn">Register</a><pre> <--For A Free Trial</pre>
                 </div>
             </div>
         
@@ -122,17 +124,20 @@
                 <a  class="second-btn showup-btn" href="aboutus.html">Know More</a>
             </div>
 
-            <img class="about-content" id="about-image" src="images/muslimpic.png" alt="">
+            <img class="about-content" id="about-image" src="images/visual-online.png" alt="">
       
         <!-- <a class="second-btn hiden-btn" href="aboutus.html">Know More</a> -->
 
      </section>
   
-     <!--  Courses Us section design -->
+
+
+     
+     <!--  Courses section design -->
     <section class="flex-column" id="courses"> 
-        <h5>Courses</h5>
-        <div class="flex-row">
-            <div class="course flex-column"><img src="https://lnk.ink/gIzoN" alt="Qaida-o-Nazrah Course"> <p>Qaida-o-Nazrah Cours</p><span>
+        <h5 >Courses</h5>
+        <div class="flex-row courses-container">
+            <div class="course flex-column"><img src="images/qaidah.jpg" alt="Qaida-o-Nazrah Course"> <p>Qaida-o-Nazrah Cours</p><span>
                 Learn Quran Online with tajweed Quran Nazra (Quran reading) and become a reciter of Quran with proper pronunciation</span>
                 <a href="qaida-o-nazira-course.html"><i class='bx bx-link-external' ></i></a>
             </div>
@@ -229,6 +234,8 @@
   </form>
 </section>
 
+
+
 <!-- ✅ Modal Box -->
 <div id="modal" class="modal">
   <div class="modal-content">
@@ -245,58 +252,20 @@
 
 
 
-    <!--=========== footer ============ -->
-<footer class="main-footer" id="footer">
-  <div class="footer-container">
-    
-    <!-- About Section -->
-    <div class="footer-section">
-      <h3>Islamic Mentor</h3>
-      <p>
-        Providing authentic Islamic education online for all ages. Learn Quran, Hadith, and essential beliefs with us.
-      </p>
-    </div>
-
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="index.html#about">About Us</a></li>
-        <li><a href="index.html#courses">Courses</a></li>
-        <li><a href="index.html#gallery">Gallery</a></li>
-        <li><a href="index.html#contect">Contact</a></li>
-        <li><a href="registration.html">Register</a></li>
-        <li><a href="download.html">Downloads</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Info -->
-    <div class="footer-section ">
-      <h3>Contact</h3>
-      <p><i class='bx bx-phone'></i> +92 308 0026609</p>
-      <p><i class='bx bx-envelope'></i> support@islamicmentor.com</p>
-      <p><i class='bx bx-map'></i> Karachi, Pakistan</p>
-    </div>
-
-    <!-- Social Media -->
-    <div class="footer-section">
-      <h3>Follow Us</h3>
-      <div class="social-icons">
-        <a href="#"><i class='bx bxl-facebook'></i></a>
-        <a href="#"><i class='bx bxl-instagram'></i></a>
-        <a href="#"><i class='bx bxl-youtube'></i></a>
-        <a href="#"><i class='bx bxl-whatsapp'></i></a>
-      </div>
-    </div>
-
+<!--=========== footer ============ -->
+<div id="footer-wrapper"calass="footer-space-delet">
+  <div id="footer" class="footer-space-delet">
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
   </div>
+</div>
 
-  <!-- Footer Bottom -->
-  <div class="footer-bottom">
-    <p>&copy; 2024 Islamic Mentor. All rights reserved.</p>
-  </div>
-</footer>
+
 
 
 

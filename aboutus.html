@@ -1,243 +1,528 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-
-<!-- link stylesheet -->
-    <link rel="stylesheet" href="style.css">
-<!-- link box icon -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Islamic Mentor</title>
+<link rel="stylesheet" href="style.css">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/67452bb22480f5b4f5a418ce/1idj35ctn';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
-
-
-
 <style>
+/* ====== Reset & General ====== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body, html { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; line-height:1.6; background:#f0f5ff; color:#333; }
+a { text-decoration: none; color: inherit; transition:0.3s; }
+a:hover { color:#0077ff; }
 
-
-    /* General Styles */
-.flex-column {
+/* ====== Full-screen Sections ====== */
+.section {
+    width: 100%;
+    min-height: 100vh; /* full viewport height */
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    gap: 33px;
+}
+
+#section3, #section1{
     flex-direction: column;
-    align-items: flex-start;
-    margin: 20px;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    color: #333;
 }
+/* Background Styles */
+.section.bg-blur::before {
+    content: '';
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: url('https://source.unsplash.com/1600x900/?islamic,quran') center/cover no-repeat;
+    filter: blur(8px) brightness(0.6);
+    z-index: -1;
+    border-radius: 20px;
+}
+.section.bg-solid { background-color: #ffffff; }
 
-/* Headings Styles */
-h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #2c3e50;
+/* Section Content */
+/* #section1 h1 h2{
+    margin-bottom: 0px;
+} */
+.section h1, .section h2 {
+    text-align: center;
+    color: #0077ff;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.section h1 { font-size: 4rem; }
+.section h2 { font-size: 3.2rem; }
+
+.section p {
+    font-size: 1.8rem;
+    max-width: 500px;
+    text-align: center;
+    line-height: 1.8;
     margin-bottom: 20px;
+    color:#555;
+    text-align:left;
+}
+.section img {
+    width: 40%;
+    max-width: 70%;
+    border-radius: 5px;
+    margin-top: 25px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+/* .section img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+} */
+
+/* Buttons */
+/* .section button {
+    padding: 14px 35px;
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.4s ease;
+    margin-top: 15px;
+} */
+.section button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
 }
 
-h2 {
-    font-size: 28px;
-    font-weight: bold;
-    color: #2c3e50;
+/* Lists */
+.section ul { 
+    list-style: disc inside;
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: left;
+    color:#555; 
+}
+.section ul li { margin-bottom:12px; font-size:1.1rem; }
+/* Features Section */
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
     margin-top: 30px;
-    margin-bottom: 10px;
 }
 
-/* Paragraph Styles */
-p {
-    font-size: 16px;
+.feature-card {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    padding: 25px 20px;
+    border-radius: 15px;
+    max-width: 250px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.feature-card h3 {
+    font-size: 1.8rem;
+    color: #0077ff;
+    margin: 15px 0 10px 0;
+}
+
+.feature-card p {
+    font-size: 1.4rem;
+    color: #555;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.feature-icon {
+    font-size: 3.5rem;
+    color: #00b11d;
+}
+
+/* =========================
+   SECTION 6 – WHY ONLINE
+========================= */
+
+#section6 {
+  padding: 90px 25px;
+  text-align: center;
+  /* background-image: url("images/section6.png"); */
+  /* background-repeat: no-repeat; */
+  border-radius: 24px;
+  /* max-width: 1100px; */
+  margin: 0 auto;
+}
+
+/* Heading */
+#section6 h2 {
+  font-size: 34px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* List wrapper */
+#section6 ul {
+  list-style: none;
+  padding: 0;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* Each point */
+#section6 ul li {
+  background: rgba(170, 170, 170, 0.11);
+  padding: 18px 22px;
+  margin-bottom: 10px;
+  border-radius: 14px;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: left;
+  position: relative;
+  padding-left: 55px;
+  transition: all 0.35s ease;
+}
+
+/* Decorative dot */
+#section6 ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Hover effect */
+#section6 ul li:hover {
+  transform: translateX(6px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  #section6 {
+    padding: 70px 18px;
+  }
+
+  #section6 h2 {
+    font-size: 28px;
+  }
+
+  #section6 ul li {
+    font-size: 15px;
+  }
+}
+
+
+
+
+
+
+/* //=======  8  ===== */
+
+/* Parent container */
+/* #section8{
+ 
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    padding: 60px 8%;
+    background: #f8fafc;
+    flex-wrap: wrap;
+} */
+
+/* Child boxes */
+.contact-box{
+
+
+    flex: 1 1 280px;
+    max-width: 320px;
+
+
+}
+
+/* Hover */
+/* .contact-box:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+} */
+
+/* Icon button */
+.contact-box button{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 34px;
+    color: #fff;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.contact-box button:hover{
+    transform: scale(1.1);
+}
+
+/* Text */
+.contact-box h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact-box p{
+    font-size: 14px;
     line-height: 1.6;
-    margin-bottom: 20px;
     color: #555;
 }
 
-strong {
-    font-weight: bold;
-    color: #00b11d;
+/* Brand colors */
+.gmail-box button{
+    background: #a33d34;
 }
 
-/* List Styles */
-ul {
-    list-style-type: disc;
-    margin-left: 40px;
+.whatsapp-box button{
+    background: #25d366;
 }
 
-ul li {
-    font-size: 16px;
-    margin-bottom: 10px;
+.facebook-box button{
+    background: #1877f2;
 }
 
-/* Links Styles */
-a {
-    color: #00b11d;
-    text-decoration: none;
-}
+/* #section8 h2["Get In Touch"]{
+    margin-bottom: 6rem;
+} */
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* Image Suggestion Section */
-strong {
-    font-size: 16px;
-    color: #e67e22;
-}
-
-/* Contact Information */
-p a {
-    color: #3498db;
-    text-decoration: none;
-}
-
-p a:hover {
-    text-decoration: underline;
-}
-
-/* Styling for Section */
-section {
-    background-color: #f9f9f9;
-    padding: 40px;
-    margin-top: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-section h1, section h2 {
-    text-align: center;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .flex-column {
-        padding: 10px;
+/* Responsive */
+@media (max-width: 768px){
+    #section8{
+        justify-content: center;
     }
-
-    h1 {
-        font-size: 30px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-
-    ul {
-        margin-left: 20px;
+    .contact-box{
+        max-width: 100%;
     }
 }
 
+
+/* Responsive */
+@media (max-width:1024px){
+    .feature-card { max-width: 45%; }
+}
+@media (max-width:768px){
+    .features-container { flex-direction: column; align-items: center; }
+    .feature-card { max-width: 80%; }
+}
+
+/* Main Container */
+.main-about-container { width:100%; display:flex; flex-direction:column; gap:30px; }
+
+/* Responsive */
+@media (max-width:1024px){
+    .section img { max-width: 80%; }
+    .section p { font-size: 1.1rem; }
+}
+@media (max-width:768px){
+    .section { padding: 30px 20px; }
+    .section h1 { font-size:2.2rem; }
+    .section h2 { font-size:1.8rem; }
+    .section p { font-size:1rem; }
+    .section img { max-width: 90%; }
+}
+@media (max-width:480px){
+    .section { padding: 20px 15px; }
+    .section h1 { font-size:1.8rem; }
+    .section h2 { font-size:1.5rem; }
+    .section p { font-size:0.95rem; }
+}
 </style>
-
-
-
 </head>
+<body class="flex-column">
 
-
-
-<body>
-    <a id="float-whatsapp" href="https://wa.me/923080026609?text=Hi%20There!">
-    <img
-      src="https://trickuweb.com/whatsapp.png"
-      alt=""
-      height="55px"
-      width="55px"
-    />
-    </a>
-  
-<!-- header design -->
+<!-- Navbar -->
 <header class="header">
-        <a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
-    <div class="slider">
-        <div id="slider">&nbsp;&nbsp;&nbsp;&nbsp;
-            Welcome to Islamic Mentor accross the cloble – Learn Quran and Islam Online! &nbsp;&nbsp;&nbsp;&nbsp;
-        
-        </div>
-    </div>
-
-        <i class='bx bx-menu' id="menu-icon" ></i>
-
-        <nav class="navbar">
-            <a href="index.html#home" >Home</a>
-            <a href="index.html#about">About </a>
-            <a href="index.html#courses">Courses</a>
-            <a href="index.html#gallery">Gallery</a>
-            <a href="index.html#contect">Contect Us</a>
-            <a href="registration.html">Registration</a>
-            <a href="article.html">article</a>
-            <a href="download.html">Download</a>
-
-
-        </nav>
+    <a href="#" class="logo flex-row">
+        <img src="favicon/logo.png" alt="logo">
+        <p class="logo-text">Islamic Mentor</p>
+    </a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+        <a href="index.html#home" >Home</a>
+        <a href="index.html#about">About </a>
+        <a href="#courses">Courses</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#contact">Contact Us</a>
+        <a href="registration.html">Registration</a>
+        <a href="#article">Articles</a>
+        <a href="download.html">Download</a>
+    </nav>
 </header>
 
+<!-- Sections -->
+<div class="main-about-container">
 
-<section class="flex-column">      
+<!-- ===section 1 === -->
+<section id="section1" class="section flex-column bg-blur">
     <h1>About Us</h1>
     <h2>Islamic Mentor</h2>
     <p>Welcome to Islamic Mentor, an educational platform dedicated to providing authentic Islamic teachings and Quranic knowledge to people of all ages, no matter where they are in the world. Our mission is to make high-quality Islamic education accessible, convenient, and beneficial for everyone.</p>
+    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZvHnpuWZTIq7cPxOX_YeTEyau9j2yqr_TEw&s" alt="Islamic Classroom"> -->
+</section>
 
+<!-- ===section 2 === -->
+<section id="section2" class="section  bg-solid">
+    <div class="flex-column">
     <h2>Our Purpose</h2>
     <p>At Islamic Mentor, our goal is to bridge the gap between traditional Islamic education and modern technology. Whether you’re a student, a working professional, or a parent seeking Quranic education for your children, we offer well-structured courses tailored to meet your needs.</p>
-    <p><strong>Image Suggestion:</strong> A serene classroom setting with students learning from a teacher, representing traditional Quranic education.</p>
+    </div> 
+    <img src="images/online class.png" alt="Learning Quran">
+</section>
 
+    <!-- //======featuer section 3  ====== -->
+<section id="section3" class="section bg-blur flex-column">
     <h2>Our Features</h2>
-    <ul>
-        <li><strong>Online Classes:</strong> Interactive sessions with experienced teachers.</li>
-        <li><strong>Live Sessions:</strong> Opportunities to learn in real-time.</li>
-        <li><strong>Downloadable Materials:</strong> Access valuable learning resources anytime.</li>
-        <li><strong>Flexible Learning:</strong> Study from anywhere at your convenience.</li>
-    </ul>
-    <p><strong>Image Suggestion:</strong> A screenshot of an online class in progress, showing engagement between teacher and students.</p>
+    <div class="features-container">
+        <div class="feature-card">
+            <i class='bx bxs-book-reader feature-icon'></i>
+            <h3>Online Classes</h3>
+            <p>Interactive sessions with experienced teachers to guide your learning journey effectively.</p>
+        </div>
+        <div class="feature-card">
+            <i class='bx bxs-video feature-icon'></i>
+            <h3>Live Sessions</h3>
+            <p>Learn in real-time with guidance from teachers and get your doubts cleared instantly.</p>
+        </div>
+        <div class="feature-card">
+            <i class='bx bxs-download feature-icon'></i>
+            <h3>Downloadable Materials</h3>
+            <p>Access valuable learning resources anytime, anywhere, and study at your own pace.</p>
+        </div>
+        <div class="feature-card">
+            <i class='bx bxs-time feature-icon'></i>
+            <h3>Flexible Learning</h3>
+            <p>Attend classes according to your schedule. Learn from home or anywhere in the world.</p>
+        </div>
+    </div>
+</section>
 
+    <!-- //====== section 4 ====== -->
+<section id="section4" class="section bg-solid">
+    <div class="flex-column">
     <h2>Our Vision and Mission</h2>
     <p>Our vision is to ensure that every individual, regardless of location, has access to high-quality Quranic and Islamic education. Currently, we offer foundational courses, but in the future, we aim to introduce advanced-level programs to benefit an even wider audience.</p>
-    <p><strong>Image Suggestion:</strong> An inspirational image of a teacher guiding a group of students with books open, symbolizing dedication to education.</p>
-
-    <h2>Our Story</h2>
-    <p>Islamic Mentor’s journey began over 25 years ago when our respected teacher established several institutes dedicated to providing Quranic and Islamic education. These institutions operated under various names but shared a common mission: to deliver high-quality Islamic education.</p>
-    <p>Through these physical efforts, thousands of students have already benefited from Islamic education over the years, and even now, thousands of students are actively enrolled and learning through our established programs. Recognizing the growing need to expand beyond physical boundaries, we founded Islamic Mentor as an online platform to continue and amplify this legacy. Our goal is to bring Islamic teachings to every corner of the world, making education accessible to all, regardless of their circumstances.</p>
-    <p><strong>Image Suggestion:</strong> Photos of students participating in traditional classroom settings, combined with visuals of online learning sessions to represent the transition from physical to online education.</p>
-
-    <h2>Why Online?</h2>
-    <p>The transition to an online platform was driven by the need to make Islamic education accessible to everyone, regardless of their location or schedule.</p>
-    <ul>
-        <li>Many people live in areas where quality Islamic education is either limited or unavailable.</li>
-        <li>Islamic Mentor provides these individuals with the opportunity to learn authentic Islamic and Quranic teachings.</li>
-        <li>Additionally, this platform caters to those with busy lives, enabling them to attend classes anytime, anywhere.</li>
-        <li>This ensures that no one is deprived of Quranic and Islamic education due to location, time constraints, or lack of resources.</li>
-    </ul>
-    <p><strong>Image Suggestion:</strong> A map highlighting global reach with icons representing learners in different parts of the world.</p>
-
-    <h2>Our Legacy</h2>
-    <p>Our respected teacher’s contributions to Islamic education span over two decades. His efforts have elevated the standards of Quranic education, with thousands of students benefiting from his guidance. Today, this legacy continues both in physical classes and through our online platform, where we strive to reach even more learners worldwide.</p>
-    <p><strong>Image Suggestion:</strong> A collage showing historical photos of physical classes and modern visuals of online sessions, symbolizing the evolution of the institution.</p>
-
-    <h2>Contact Us</h2>
-    <p><strong>Email:</strong> Islamicmentor@gmail.com</p>
-    <p><strong>WhatsApp:</strong> 03113471545</p>
-    <p><strong>Facebook:</strong> <a href="//Islamicmentor">Islamic Mentor</a></p>
-
-    <h2>Testimonials (Optional)</h2>
-    <p>"Islamic Mentor has transformed how we learn the Quran despite our busy schedules. The online sessions are interactive and extremely beneficial!" – A Satisfied Student</p>
-    <p><strong>Image Suggestion:</strong> A photo or graphic of a positive testimonial from a student to build trust and authenticity.</p>            
+    </div>
+    <img src="images/traditional pic.png" alt="Teacher guiding students">
 </section>
+
+    <!-- //====== section 5 ====== -->
+<section id="section5" class="section bg-blur">
+
+    <img src="images/visual-online.png" alt="School Story">
+    <div class="flex-column">
+    <h2>Our Story</h2>
+    <p>Islamic Mentor’s journey began over 25 years ago when our respected teacher established institutes dedicated to Quranic and Islamic education.
+
+        <!-- Islamic Mentor’s journey began over 25 years ago when our respected teacher established several institutes dedicated to providing Quranic and Islamic education. These institutions operated under various names but shared a common mission: to deliver high-quality Islamic education.
+
+Through these physical efforts, thousands of students have already benefited from Islamic education over the years, and even now, thousands of students are actively enrolled and learning through our established programs. Recognizing the growing need to expand beyond physical boundaries, we founded Islamic Mentor as an online platform to continue and amplify this legacy. Our goal is to bring Islamic teachings to every corner of the world, making education accessible to all, regardless of their circumstances. -->
+    </p>
+   </div>
+</section>
+
+    <!-- //====== section 6 ====== -->
+<section id="section6" class="section bg-solid">
+    <img src="images/section6.png" alt="">
+    <div class="flex-column">
+    <h2>Why Online?</h2>
+    <ul>
+        <li>Many people live in areas where quality Islamic education is limited or unavailable.</li>
+        <li>Islamic Mentor provides access to authentic teachings.</li>
+        <li>Attend classes anytime, anywhere.</li>
+        <li>No one is deprived of education due to location or schedule.</li>
+    </ul>
+    </div>
+</section>
+
+    <!-- //====== section 7 ====== -->
+<section id="section7" class="section bg-blur">
+    <div class="flex-column">
+    <h2>Our Legacy</h2>
+    <p>Our teacher’s contributions to Islamic education span over two decades, with thousands of students benefiting from his guidance.</p>
+    </div>
+    <img src="images/visual-online.png" alt="Legacy">
+</section>
+
+<!-- //====== section 8 ====== -->
+<section id="section8" class="section bg-solid">
+<div class="flex-column">
+    <h2>Get In Touch</h2>
+    <!-- Gmail -->
+<div class="flex-row">
+    <div class="contact-box flex-column gmail-box">
+        <button onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=arsalanquraishi999@gmail.com','_blank')">
+            <!-- Gmail Icon -->
+            <i class="bx bxl-gmail"></i>
+        </button>
+        <h2>Email Us</h2>
+        <p>Send us your questions or course inquiries via Gmail. We usually respond within 24 hours.</p>
+    </div>
+
+    <!-- WhatsApp -->
+    <div class="contact-box flex-column whatsapp-box">
+        <button onclick="window.open('https://wa.me/923161624006','_blank')">
+            <!-- WhatsApp Icon -->
+            <i class="bx bxl-whatsapp"></i>
+        </button>
+        <h2>WhatsApp</h2>
+        <p>Chat with us directly on WhatsApp for quick guidance and instant support.</p>
+    </div>
+
+    <!-- Facebook -->
+    <div class="contact-box flex-column facebook-box">
+        <button onclick="window.open('https://www.facebook.com/islamicmentor.online','_blank')">
+            <!-- Facebook Icon -->
+            <i class="bx bxl-facebook"></i>
+        </button>
+        <h2>Facebook Page</h2>
+        <p>Follow Islamic Mentor on Facebook for updates, posts, and educational content.</p>
+    </div>
+</div>
+</div>
+</section>
+
+
+
+</div>
+
+<!-- Footer -->
+<div id="footer">
+    <script>
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer").innerHTML = data)
+    .catch(err => console.error(err));
+    </script>
+
+</div>
+
+
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="script.js"></script>
 </body>
+</html>

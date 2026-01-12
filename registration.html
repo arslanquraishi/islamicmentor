@@ -106,7 +106,7 @@
     <a href="index.html#about">About</a>
     <a href="#courses">Courses</a>
     <a href="index.html#gallery">Gallery</a>
-    <a href="index.html#contect">Contact Us</a>
+    <a href="index.html#contact">Contact Us</a>
     <a href="registration.html" class="active">Registration</a>
     <a href="#">Articles</a>
     <a href="download.html">Download</a>
@@ -147,8 +147,8 @@
 
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="script.js"></script>
-<div id="footer"></div>
 
+<div id="footer">
 <script>
   // Load Footer
   fetch("footer.html")
@@ -156,7 +156,10 @@
     .then(data => {
       document.getElementById("footer").innerHTML = data;
     });
+</script>
+</div>
 
+<script>
   // Handle Form Submission with Thank You message
   document.getElementById("studentForm").addEventListener("submit", function (e) {
     e.preventDefault();

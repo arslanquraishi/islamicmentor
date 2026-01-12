@@ -14,7 +14,9 @@
 
   <style>
     #downloads {
-      padding: 10rem 5% 6rem;
+      padding: 8rem 7% 6rem;
+      overflow: hidden;
+      /* margin-bottom:; */
       background: linear-gradient(to bottom, #ffffff, #f0f7ff, #d7e8fb);
     }
 
@@ -95,13 +97,13 @@
       <a href="index.html#about">About</a>
       <a href="index.html#courses">Courses</a>
       <a href="index.html#gallery">Gallery</a>
-      <a href="index.html#contect">Contact</a>
+      <a href="index.html#contact">Contact</a>
       <a href="registration.html">Registration</a>
       <a href="#">Article</a>
       <a href="#downloads">Download</a>
     </nav>
   </header>
-
+<div class="download/-content column"> 
   <section id="downloads">
     <h2 class="heading">Download <span>Resources</span></h2>
 
@@ -145,9 +147,23 @@
 
     </div>
   </section>
+<!--====foooter imprt====== -->
+  <div id="footer-wrapper"calass="footer-space-delet">
+   <div id="footer" class="footer-space-delet">
+    <script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+    </script>
+    </div>
+  </div>
 
+</div>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js"></script>
 </body>
+
 
 </html>
