@@ -32,7 +32,7 @@
     display: flex;
     flex-direction:row ;
     flex-wrap: no-wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 /* =========== Headings =========== */
@@ -215,7 +215,7 @@ span{
     font-size: 5.6rem ;
     font-weight: 700;
     line-height: 1.3;
-       background: linear-gradient(90deg,  #002faf,#00be20);
+    background: linear-gradient(90deg,  #004bec,#00be20);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

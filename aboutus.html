@@ -18,10 +18,10 @@ a:hover { color:#0077ff; }
 .section {
     width: 100%;
     min-height: 100vh; /* full viewport height */
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     padding: 60px 40px;
     position: relative;
     overflow: hidden;
@@ -216,6 +216,12 @@ a:hover { color:#0077ff; }
   #section6 {
     padding: 70px 18px;
   }
+  .section img{
+    width: 100%;
+  }
+  section{
+    height: auto;
+  }
 
   #section6 h2 {
     font-size: 28px;
@@ -306,51 +312,6 @@ a:hover { color:#0077ff; }
     background: #1877f2;
 }
 
-/* #section8 h2["Get In Touch"]{
-    margin-bottom: 6rem;
-} */
-
-/* Responsive */
-@media (max-width: 768px){
-    #section8{
-        justify-content: center;
-    }
-    .contact-box{
-        max-width: 100%;
-    }
-}
-
-
-/* Responsive */
-@media (max-width:1024px){
-    .feature-card { max-width: 45%; }
-}
-@media (max-width:768px){
-    .features-container { flex-direction: column; align-items: center; }
-    .feature-card { max-width: 80%; }
-}
-
-/* Main Container */
-.main-about-container { width:100%; display:flex; flex-direction:column; gap:30px; }
-
-/* Responsive */
-@media (max-width:1024px){
-    .section img { max-width: 80%; }
-    .section p { font-size: 1.1rem; }
-}
-@media (max-width:768px){
-    .section { padding: 30px 20px; }
-    .section h1 { font-size:2.2rem; }
-    .section h2 { font-size:1.8rem; }
-    .section p { font-size:1rem; }
-    .section img { max-width: 90%; }
-}
-@media (max-width:480px){
-    .section { padding: 20px 15px; }
-    .section h1 { font-size:1.8rem; }
-    .section h2 { font-size:1.5rem; }
-    .section p { font-size:0.95rem; }
-}
 </style>
 </head>
 <body class="flex-column">
@@ -386,7 +347,7 @@ a:hover { color:#0077ff; }
 </section>
 
 <!-- ===section 2 === -->
-<section id="section2" class="section  bg-solid">
+<section id="section2" class="section flex-row bg-solid">
     <div class="flex-column">
     <h2>Our Purpose</h2>
     <p>At Islamic Mentor, our goal is to bridge the gap between traditional Islamic education and modern technology. Whether you’re a student, a working professional, or a parent seeking Quranic education for your children, we offer well-structured courses tailored to meet your needs.</p>
@@ -395,7 +356,7 @@ a:hover { color:#0077ff; }
 </section>
 
     <!-- //======featuer section 3  ====== -->
-<section id="section3" class="section bg-blur flex-column">
+<section id="section3" class="section bg-blur flex-row flex-column">
     <h2>Our Features</h2>
     <div class="features-container">
         <div class="feature-card">
@@ -422,7 +383,7 @@ a:hover { color:#0077ff; }
 </section>
 
     <!-- //====== section 4 ====== -->
-<section id="section4" class="section bg-solid">
+<section id="section4" class="section flex-row bg-solid">
     <div class="flex-column">
     <h2>Our Vision and Mission</h2>
     <p>Our vision is to ensure that every individual, regardless of location, has access to high-quality Quranic and Islamic education. Currently, we offer foundational courses, but in the future, we aim to introduce advanced-level programs to benefit an even wider audience.</p>
@@ -431,7 +392,7 @@ a:hover { color:#0077ff; }
 </section>
 
     <!-- //====== section 5 ====== -->
-<section id="section5" class="section bg-blur">
+<section id="section5" class="section flex-row bg-blur">
 
     <img src="images/visual-online.png" alt="School Story">
     <div class="flex-column">
@@ -446,7 +407,7 @@ Through these physical efforts, thousands of students have already benefited fro
 </section>
 
     <!-- //====== section 6 ====== -->
-<section id="section6" class="section bg-solid">
+<section id="section6" class="section flex-row bg-solid">
     <img src="images/section6.png" alt="">
     <div class="flex-column">
     <h2>Why Online?</h2>
@@ -460,7 +421,7 @@ Through these physical efforts, thousands of students have already benefited fro
 </section>
 
     <!-- //====== section 7 ====== -->
-<section id="section7" class="section bg-blur">
+<section id="section7" class="section flex-row bg-blur">
     <div class="flex-column">
     <h2>Our Legacy</h2>
     <p>Our teacher’s contributions to Islamic education span over two decades, with thousands of students benefiting from his guidance.</p>
@@ -469,7 +430,7 @@ Through these physical efforts, thousands of students have already benefited fro
 </section>
 
 <!-- //====== section 8 ====== -->
-<section id="section8" class="section bg-solid">
+<section id="section8" class="section flex-row bg-solid">
 <div class="flex-column">
     <h2>Get In Touch</h2>
     <!-- Gmail -->
@@ -505,9 +466,6 @@ Through these physical efforts, thousands of students have already benefited fro
 </div>
 </div>
 </section>
-
-
-
 </div>
 
 <!-- Footer -->
