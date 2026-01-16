@@ -34,6 +34,7 @@
     flex-wrap: no-wrap;
     justify-content: center;
     align-items: center;
+    /* align-content: center;/ */
 }
 /* =========== Headings =========== */
 h5{
@@ -49,10 +50,10 @@ section{
     margin: 9px 0;
     align-items: center;
     appearance: none;
-    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    background-image: radial-gradient(100% 100% at 100% 0, #e74444 0, #8a2020 100%);
     border: 0;
     border-radius: 26px;
-    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-shadow: rgba(66, 35, 35, 0.4) 0 2px 4px,rgba(66, 35, 35, 0.3) 0 7px 13px -3px,rgba(111, 58, 58, 0.5) 0 -3px 0 inset;
     box-sizing: border-box;
     color: #fff;
     cursor: pointer;
@@ -78,16 +79,16 @@ section{
   }
   
   .second-btn:focus {
-    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    box-shadow: #e03c3c 0 0 0 1.5px inset, rgba(66, 35, 35, 0.4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #e0413c 0 -3px 0 inset;
   }
   
   .second-btn:hover {
-    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    box-shadow: rgba(66, 35, 35, 0.4) 0 4px 8px, rgba(66, 35, 35, 0.3) 0 7px 13px -3px, #e03c3c 0 -3px 0 inset;
     transform: translateY(-2px);
   }
   
   .second-btn:active {
-    box-shadow: #3c4fe0 0 3px 7px inset;
+    box-shadow: #e03c3c 0 3px 7px inset;
     transform: translateY(2px);
   }
 
@@ -107,8 +108,8 @@ body{
 
 .slider {
     overflow: hidden;
-    display: none;
     white-space:nowrap;
+    display: none;
     width: 50%;
     max-width: 200px;
     padding: 10px;
@@ -267,7 +268,7 @@ span{
 .btn {
     align-items: center;
     appearance: none;
-    background-image: radial-gradient(100% 100% at 100% 0, #02bb2a 0, #0063a5 100%);
+    background-image: radial-gradient(100% 100% at 100% 0, #00e732 0, #00a824 100%);
     border: 0;
     border-radius: 30px;
     box-shadow: rgba(35, 66, 40, 0.4) 0 2px 4px,rgba(35, 66, 48, 0.3) 0 7px 13px -3px,rgba(58, 111, 69, 0.5) 0 -3px 0 inset;
@@ -311,19 +312,7 @@ span{
   }
 
 
-/* .btn{
-    padding: 1rem 2.8rem;
-    background: var(--green-color);
-    border-radius: 4rem;
-    color: var(--white-color);
-    box-shadow: 0 0 1rem var(--green-color);
-    letter-spacing: .1rem;
-    font-weight: 700;
-    transition: 500ms;
-}
-.btn:hover{
-    box-shadow: none;
-} */
+
 
 /* ========================= About Us ============================ */
 
@@ -347,6 +336,7 @@ span{
         background-repeat:no-repeat;
         background-attachment: fixed;
         background-blend-mode:lighten;
+        gap: 3%;
     }
  
 
@@ -355,11 +345,13 @@ span{
 
 #courses{
     /* background-image:var(--green-gradiant-color); */
-    background-color: #cae7f5;
+    background-color: #e4e9ee;
 
 }
+
 .courses-container{
     margin-bottom: 3rem;
+    gap: 2%;
 }
 .course {
 
@@ -378,11 +370,15 @@ span{
     height: 50%;
     border-radius: 10px;
     margin: 5px;
+    /* box-shadow: inset white 4px 3px; */
+    /* opacity: 50%; */
+    /* transition: all 200ms;
+    overflow: hidden; */
 }
 
-.course:hover{
+/* .course img:hover{
     transform: scale(1.1);
-}
+} */
 
 
 .course{
@@ -717,6 +713,7 @@ span{
 }
 
 .footer-container {
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -805,7 +802,7 @@ span{
 /* ==================== Footer Responsive ======================= */
 @media (max-width: 768px) {
 .logo{
-    width:30%;
+    width:3%;
     min-width:54px;
     cursor:default;
     cursor: pointer;
@@ -914,6 +911,7 @@ span{
     section{
         width: 1024px;
         }
+
 }
 
 
@@ -932,9 +930,7 @@ span{
     @media (max-width: 1104px){
         .gallery img{
             width: 300px;
-        }
- 
-        
+        }  
     }
 
 
@@ -1034,6 +1030,8 @@ section{
     align-items: center;
  }
 
+
+
     
  .slider {
     overflow: hidden;
@@ -1041,9 +1039,9 @@ section{
     white-space: nowrap;
     margin: 0 0 0 23px;
     width:70%;
-    max-width:40%;
+    max-width:48%;
     padding: 10px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     color: #000000;
     /* border: 1px solid #ddd; Optional for clarity */

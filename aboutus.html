@@ -71,6 +71,7 @@ a:hover { color:#0077ff; }
 .section img {
     width: 40%;
     max-width: 70%;
+    min-width: 300px;
     border-radius: 5px;
     margin-top: 25px;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -212,7 +213,8 @@ a:hover { color:#0077ff; }
 }
 
 /* Mobile adjustments */
-@media (max-width: 600px) {
+
+/* @media (max-width: 600px) {
   #section6 {
     padding: 70px 18px;
   }
@@ -230,7 +232,7 @@ a:hover { color:#0077ff; }
   #section6 ul li {
     font-size: 15px;
   }
-}
+} */
 
 
 
@@ -252,11 +254,9 @@ a:hover { color:#0077ff; }
 
 /* Child boxes */
 .contact-box{
-
-
-    flex: 1 1 280px;
+    /* gap: 3px; */
+    flex: 1 1 240px;
     max-width: 320px;
-
 
 }
 
@@ -297,6 +297,7 @@ a:hover { color:#0077ff; }
     font-size: 14px;
     line-height: 1.6;
     color: #555;
+    text-align: center;
 }
 
 /* Brand colors */
@@ -322,6 +323,13 @@ a:hover { color:#0077ff; }
         <img src="favicon/logo.png" alt="logo">
         <p class="logo-text">Islamic Mentor</p>
     </a>
+
+   <div class="slider">
+        <div id="slider">&nbsp;&nbsp;&nbsp;&nbsp;
+            Welcome to Islamic Mentor accross the cloble – Learn Quran and Islam Online! &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+
     <i class='bx bx-menu' id="menu-icon"></i>
     <nav class="navbar">
         <a href="index.html#home" >Home</a>
