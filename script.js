@@ -68,15 +68,31 @@ try {
     console.warn("Typed.js not loaded or not found");
 }
 
-// ========== Scroll Reveal ==========
-// ScrollReveal({
-//     reset: true,
-//     distance: '80px',
-//     duration: 2000,
-//     delay: 200
-// });
-// ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-// ScrollReveal().reveal('.home-img, .services-container, .gallery, .contact form', { origin: 'bottom' });
+
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Default jump ko roknay ke liye
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            // Screen ko aram se scroll karwanay ka code
+            const headerHeight = 80; // Aapke header ki height
+            const targetPosition = targetElement.offsetTop - headerHeight;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+
+
 
 // ========== Gallery Lightbox ==========
 const lightbox = document.getElementById("lightbox");

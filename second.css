@@ -1,387 +1,276 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    border: none;
-    scroll-behavior: smooth;
-    font-family: poppins, sans-serif;
-    
-}
-
-html{
-    background-color: white;
-}
-:root{
-    --bg-color:linear-gradient(rgb(255, 255, 255), rgb(250, 254, 255), rgb(183, 214, 243) 89%);
-    --green-gradiant-color:linear-gradient(rgb(255, 255, 255),  rgba(162, 216, 166, 0.87) 89%);
-    --second-bg-color:#004d99;
-    --green-color:#00a808;
-    --black-color:rgb(0, 0, 0);
-    --white-color:white;
-}
-
-
-
-
-
-/* CSS */
-.button-29 {
-    align-items: center;
-    appearance: none;
-    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
-    border: 0;
-    border-radius: 6px;
-    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-flex;
-    font-family: "JetBrains Mono",monospace;
-    height: 48px;
-    justify-content: center;
-    line-height: 1;
-    list-style: none;
-    overflow: hidden;
-    padding-left: 16px;
-    padding-right: 16px;
-    position: relative;
-    text-align: left;
-    text-decoration: none;
-    transition: box-shadow .15s,transform .15s;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    will-change: box-shadow,transform;
-    font-size: 18px;
-  }
-  
-  .button-29:focus {
-    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-  }
-  
-  .button-29:hover {
-    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-    transform: translateY(-2px);
-  }
-  
-  .button-29:active {
-    box-shadow: #3c4fe0 0 3px 7px inset;
-    transform: translateY(2px);
-  }
-
-/* ================flexible all section with one class row & colunm ==================== */
-
-.flex-column{
+/* =========================================
+   1. LAYOUT SETTINGS (Footer Fix)
+   ========================================= */
+body {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-content: center;
-    align-items: flex-start;
-}
-.flex-row{
-    display: flex;
-    flex-direction:row ;
-    flex-wrap: no-wrap;
-    justify-content:flex-start;
-    align-items: center;
+    min-height: 100vh;
 }
 
-
-h5{
-    /* margin-bottom: 20px; */
-    font-size: 60px;
-    /* text-align: center; */
+.course-page-wrapper {
+    flex: 1; /* Yeh content ko stretch karega taake footer neechay rahay */
+    padding: 12rem 9% 5rem; /* Header ke liye top padding */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-section{
-    padding: 12rem 9% 2rem;
+/* =========================================
+   2. BREADCRUMB
+   ========================================= */
+.breadcrumb {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    color: #666;
 }
 
-
-/* .second-btn{
-    padding: .6rem 1.2rem;
-    margin: 15px 0;
-    background: var(--green-color);
-    border-radius: 4rem;
-    color: var(--white-color);
-    box-shadow: 0 0 1rem var(--green-color);
-    letter-spacing: .1rem;
-    font-weight: 700;
-    font-size: 12px;
-    transition: 500ms;
-} */
-
-
-/* =================== header==================== */
-
-html{
-    font-size:62.5%;
-}
-body{
-    background-color:var(--bg-color);
+.breadcrumb a {
     color: var(--second-bg-color);
-    /* display: flex; */
-    /* height: 400px;// */
+    transition: 0.3s;
 }
 
-
-.slider {
-    overflow: hidden;
-    white-space:nowrap;
-    width: 50%;
-    max-width: 200px;
-    padding: 10px;
-    font-size: 20px;
-}
-
-#slider {
-    display: inline-block;
-    padding-left: 0%;
-    animation: slideAnimation 20s 0ms linear infinite  ;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-}
-
-@keyframes slideAnimation {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-/* ============= COURSES DETAILS ============ */
-
-.courses-section{
-    width: 100%;
-    height: 120vh;
-    background-color: rgb(177, 170, 165);
-    justify-content: space-around;
-    align-content: space-between;
-    /* overflow: hidden; */
-}
-
-
-.qaida-o-nazra-sec{
-    width: 100%;
-    background-color: #13283d;
-    height:390px;
-    padding: 8% 9%;
-    position: relative;
-}
-
-.qaida-o-nazra{
-    height: 100vh;
-    top: 50px;
-}
-.first-detail{
-    margin:20px 0;
-    padding: 30px 0;
-    width: 60%;
-    min-width: 300px;
-    color: white;
-    /* position: relative; */
-}
-.first-detail h1{
-    font-size: 5rem;
-    font-weight: 600;
-}
-.first-detail p {
-    font-size: 12px;
-    line-height:1.4;
-    font-weight: 200;
-}
-
-
-/* =========== Second Detail Start ================ */
-
-
-/* .second-container{
-    width: 100vw;
-    height:100%;
-    margin:20px;
-} */
-
-.second-detail{
-    margin:20px 9%;
-    width: 40%;
-    box-sizing: border-box;
-    /* display: block; */
-
-
-    color: black;
-    background-color: rgb(255, 255, 255);
-    border: 2px groove rgba(0, 0, 0, 0.24);
-    border-radius: 5px;
-    padding:30px;
-    margin-bottom: 100%;
-    /* position: relative; */
-
-}
-
-.second-detail h1{
-    font-weight: 500;
-    font-size: 25px;
-}
-.second-detail span{
+.breadcrumb a:hover {
     color: var(--green-color);
-    font-size: 18px;
-    margin: 1px 6px;
-
 }
 
-.second-detail p {
-    font-size:14px;
-    font-weight: 300;
-    color: #000000ad;
+.breadcrumb span {
+    margin: 0 10px;
 }
 
-/* ========== Third Detail Start  ============== */
+.breadcrumb .current {
+    color: var(--green-color);
+    font-weight: 600;
+}
 
-.course-detail{
-    position:absolute;
-    top: 120px;
-    right:120px;
-    width: 26%;
-    min-width: 300px;
-    padding-bottom: 25px;
-    background-color: white;
-    border: 2px solid white;
-    outline: 1px solid rgba(0, 0, 0, 0.199);
+/* =========================================
+   3. MAIN COURSE CONTAINER (Grid)
+   ========================================= */
+.course-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 hissay content, 1 hissa sidebar */
+    gap: 4rem;
+    align-items: start;
+}
+
+
+/* =========================================
+   COURSE HERO (Half Screen Height & Image)
+   ========================================= */
+.course-hero {
+    width: 100vw; /* Poori screen ki chaudai */
+    height: 50vh; /* Screen ki aadhi height (Half Screen) */
+    margin-top: 5rem; /* Header ke niche se shuru karne ke liye */
     
-}
-
-
-.course-detail img {
-    width: 100%;
-    height: 200px;         /* fixed height */
-    object-fit: cover;     /* image ko crop karke fit karega without distortion */
-    border-radius: 5px;    /* optional: thoda rounded look */
-}
-
-.course-detail h1{
-    margin: 5px 10px;
-    color: black;
-    font-size: 30px;
-    text-align: center;
-    font-weight: 500;
-}
-
-.course-detail .button-29{
-    margin: 0px 10px;
-    width: 90%;
-}
-
-.course-detail h2{
-    color: black;
-    font-weight: 500;
-    /* font-size:24px; */
-    margin: 20px;
-}
-
-.course-detail strong{
-    /* display: inline-block; */
-    font-size: 12px;
-    font-weight: 600;
-    color:black;
-}
-.course-detail p{
-    color: black;
-    font-size: 12px;
-}
-/* .point{
-    width: 90%;
-} */
-
-.course-detail span{
-    color:rgb(20, 155, 38);
-    font-weight: bold;
-    font-size: 22px;
-    margin-left: 10px;
-    margin-right: 4px;
-}
-
-
-
-
-/* =================== Media Qeuri  ======================= */
-
-@media(max-width:1200px){
-/* .course-detail{
-    position:static;
-} */
-
-.first-detail{
-    width: 80%;
-}
-.flex-column{
+    /* Background Image Setting */
+    background: linear-gradient(rgba(0, 40, 80, 0.75), rgba(0, 40, 80, 0.75)), 
+                url('images/quran-reading.png'); /* Aapki mangi hui image */
+                
+    background-size: cover; /* Image poore section ko fill karegi */
+    background-position: center; /* Image center mein nazar aayegi */
+    background-attachment: fixed; /* Scrolling ke waqt professional look ke liye */
+    
+    display: flex;
+    flex-direction: column;
     align-items: center;
-}
-
-.first-detail h1{
+    justify-content: center;
     text-align: center;
-    font-size: 3.3rem;
-    line-height: 1;
-    font-weight: 1000;
-}
-.first-detail p {
-    text-align: justify;
-    font-size: 12px;
-    line-height:1.4;
-    font-weight: 200;
+    color: white;
 }
 
-.first-detail h1{
-    font-size: 5rem;
-    font-weight: 600;
+/* Hero Section ka Text */
+.hero-content h1 {
+    font-size: 5rem; /* Heading thori bari kar di hai */
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5); /* Text ko wazay dikhane ke liye */
     margin-bottom: 10px;
 }
-.first-detail p {
-    font-size: 12px;
-    line-height:1.4;
-    font-weight: 200;
-}
-   .course-detail{
-    display: none;
-   }
 
-
-
-.second-detail{
-    margin:20px 9%;
-    width: 40%;
-    min-width: 400px;
-    color: black;
-    background-color: aliceblue;
-    border: 2px groove rgba(0, 0, 0, 0.24);
-    border-radius: 5px;
-    padding:30px;
-}
+.hero-content .course-subtitle {
+    font-size: 2.2rem;
+    color: #f0f0f0;
+    font-weight: 400;
+    max-width: 800px;
 }
 
-
-
-
-@media (max-width:500px){
-.second-detail{
-    width: 90%;
-    min-width: 300px;
-    margin: auto;
+/* Mobile ke liye adjustment */
+@media (max-width: 768px) {
+    .course-hero {
+        height: 40vh; /* Mobile par thori kam height behtar lagti hai */
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
 }
 
+/* =========================================
+   4. CONTENT STYLING
+   ========================================= */
+.course-header h1 {
+    font-size: 4rem;
+    color: var(--second-bg-color);
+    margin-bottom: 1rem;
+}
 
+.course-subtitle {
+    font-size: 1.8rem;
+    color: #555;
+    margin-bottom: 3rem;
+}
 
-.first-detail h1{
-    font-size: 3rem;
+.course-banner-img img {
+    width: 100%;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-bottom: 4rem;
+}
+
+.section-spacing {
+    margin-bottom: 4rem;
+}
+
+.course-description h2, 
+.learning-outcomes h2 {
+    font-size: 2.8rem;
+    color: var(--second-bg-color);
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--green-color);
+    padding-left: 15px;
+}
+
+.course-description p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.outcome-list {
+    list-style: none;
+}
+
+.outcome-list li {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+}
+
+.outcome-list li i {
+    color: var(--green-color);
+    font-size: 2.2rem;
+}
+
+/* =========================================
+   5. SIDEBAR STYLING
+   ========================================= */
+.course-sidebar {
+    position: sticky;
+    top: 10rem; /* Header ke neechay rukay ga */
+}
+
+.course-info-card {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+}
+
+.course-info-card h3 {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    color: var(--second-bg-color);
+    text-align: center;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.info-item i {
+    font-size: 2.4rem;
+    color: var(--green-color);
+    background: #eafaf1;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.info-text strong {
+    display: block;
+    font-size: 1.4rem;
+    color: #777;
+}
+
+.info-text span {
+    font-size: 1.6rem;
     font-weight: 600;
-}
-.first-detail p {
-    font-size: 12px;
-    line-height:1.4;
-    font-weight: 200;
+    color: var(--second-bg-color);
 }
 
+.course-price {
+    text-align: center;
+    margin: 2.5rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--green-color);
+}
+
+.btn-enroll {
+    display: block;
+    background: linear-gradient(135deg, #00e732, #00a824);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-enroll:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 168, 8, 0.3);
+}
+
+.sidebar-note {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #888;
+    margin-top: 1.5rem;
+}
+
+/* =========================================
+   6. RESPONSIVE DESIGN
+   ========================================= */
+@media (max-width: 991px) {
+    .course-container {
+        grid-template-columns: 1fr; /* Mobile par sidebar neechay aa jaye ga */
+    }
+    
+    .course-sidebar {
+        position: static;
+    }
+    
+    .course-page-wrapper {
+        padding: 12rem 5% 5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-header h1 {
+        font-size: 3rem;
+    }
+    
+    .course-info-card {
+        padding: 2rem;
+    }
 }

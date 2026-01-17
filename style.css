@@ -36,62 +36,79 @@
     align-items: center;
     /* align-content: center;/ */
 }
+
+
+
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+
+
+
+
 /* =========== Headings =========== */
 h5{
     font-size: 35px;
-    margin-bottom: 20px;
+    margin-bottom:15px;
+    color: var(--second-bg-color);
 }
 
 section{
     padding: 12rem 9% 2rem;
 }
-
-.second-btn{
-    margin: 9px 0;
+.second-btn {
+    margin: 14px 0px 0 0;
     align-items: center;
     appearance: none;
-    background-image: radial-gradient(100% 100% at 100% 0, #e74444 0, #8a2020 100%);
+    /* Red gradient ko Blue gradient se badal diya */
+    background-image: radial-gradient(100% 100% at 100% 0, #0066cc 0, #004d99 100%);
     border: 0;
     border-radius: 26px;
-    box-shadow: rgba(66, 35, 35, 0.4) 0 2px 4px,rgba(66, 35, 35, 0.3) 0 7px 13px -3px,rgba(111, 58, 58, 0.5) 0 -3px 0 inset;
+    /* Shadows ko Blue theme ke mutabiq adjust kiya */
+    box-shadow: rgba(0, 40, 80, 0.3) 0 2px 4px, rgba(0, 40, 80, 0.2) 0 7px 13px -3px, rgba(0, 30, 60, 0.4) 0 -3px 0 inset;
     box-sizing: border-box;
     color: #fff;
     cursor: pointer;
     display: inline-flex;
-    font-family: "JetBrains Mono",monospace;
+    font-family: "Poppins", sans-serif; /* Ya aapka preferred font */
     height: 45px;
     justify-content: center;
     line-height: 1;
     list-style: none;
     overflow: hidden;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 24px; /* Padding thori barha di taake button balance lage */
+    padding-right: 24px;
     position: relative;
     text-align: left;
     text-decoration: none;
-    transition: box-shadow .15s,transform .15s;
+    transition: box-shadow .15s, transform .15s;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
-    will-change: box-shadow,transform;
-    font-size: 18px;
-  }
-  
-  .second-btn:focus {
-    box-shadow: #e03c3c 0 0 0 1.5px inset, rgba(66, 35, 35, 0.4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #e0413c 0 -3px 0 inset;
-  }
-  
-  .second-btn:hover {
-    box-shadow: rgba(66, 35, 35, 0.4) 0 4px 8px, rgba(66, 35, 35, 0.3) 0 7px 13px -3px, #e03c3c 0 -3px 0 inset;
-    transform: translateY(-2px);
-  }
-  
-  .second-btn:active {
-    box-shadow: #e03c3c 0 3px 7px inset;
-    transform: translateY(2px);
-  }
+    will-change: box-shadow, transform;
+    font-size: 16px;
+    font-weight: 600;
+}
 
+.second-btn:focus {
+    /* Focus ring ko blue kiya */
+    box-shadow: #005fcc 0 0 0 1.5px inset, rgba(0, 40, 80, 0.4) 0 2px 4px, rgba(0, 40, 80, .3) 0 7px 13px -3px, #004d99 0 -3px 0 inset;
+}
+
+.second-btn:hover {
+    /* Hover effect ko blue theme mein rakha */
+    box-shadow: rgba(0, 40, 80, 0.4) 0 4px 8px, rgba(0, 40, 80, 0.3) 0 7px 13px -3px, #005fcc 0 -3px 0 inset;
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+.second-btn:active {
+    box-shadow: #004d99 0 3px 7px inset;
+    transform: translateY(2px);
+}
 
 
 /* =================== header==================== */
@@ -181,53 +198,71 @@ body{
     cursor: pointer;
     line-height:0.9;
     font-size:1.4rem;
-    color: #396394;
+    color: var(--second-bg-color);
     font-weight:bold;
     font-family: Arial, Helvetica, sans-serif
 }
 
-/* ======================= home section================== */
+/* ======================= home section ================== */
 
-.home{
-    background-image:var(--bg-color);
+.home {
+    background-image: var(--bg-color);
     gap: 3rem;
 }
-#home b{
-    font-size: medium;
+
+#home b {
+    /* Bold text color updated to Navy Blue for better look */
+    color: #002850; 
+    font-size: 1.8rem; /* Pehle medium tha, ab size thora behtar kiya */
+    display: block;
+    margin-bottom: 1rem;
 }
-#home-first-img{
+
+#home-first-img {
     display: none;
 }
+
 .home img {
-    width:35vw;
+    width: 35vw;
     min-width: 370px;
 }
-.home-content h3{
+
+.home-content h3 {
     font-size: 3.2rem;
     font-weight: 700;
+    color: #444; /* Soft shade for sub-heading */
 }
+
 .home-content h3:nth-of-type(2) {
-    margin-bottom:2rem;
+    margin-bottom: 2rem;
 }
-span{
+
+span {
     color: var(--green-color);
 }
-.home-content h1{
-    font-size: 5.6rem ;
+
+.home-content h1 {
+    font-size: 5.6rem;
     font-weight: 700;
     line-height: 1.3;
-    background: linear-gradient(90deg,  #004bec,#00be20);
+    background: linear-gradient(90deg, #004bec, #00be20);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.home-content p{
-    font-size: 1.6rem;
 
+/* Universal Paragraph Settings Applied Here */
+.home-content p {
+    font-size: 1.6rem;
+    color: #444444;       /* Universal soft grey color */
+    line-height: 1.6;     /* Universal line spacing */
+    letter-spacing: 0.3px; /* Universal letter spacing */
+    /* margin-bottom: 1.5rem; */
 }
-.social-media a{
+
+.social-media a {
     display: inline-flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     width: 4rem;
     height: 4rem;
     background: transparent;
@@ -235,16 +270,17 @@ span{
     border-radius: 50%;
     font-size: 2rem;
     color: var(--second-bg-color);
-    margin:3rem 1.5rem 3rem 0;
+    margin: 3rem 1.5rem 3rem 0;
     transition: 400ms ease;
-
 }
-.social-media a:hover{
+
+.social-media a:hover {
     background: var(--second-bg-color);
     color: var(--white-color);
-    box-shadow:0 0 1rem var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--second-bg-color);
 }
-.home-content{
+
+.home-content {
     align-items: flex-start;
 }
 
@@ -253,6 +289,8 @@ span{
     font-weight: 520;
     color: #00b11d;
     animation: pr 4s infinite ease-in-out;
+    /* Pre ka default font family change kiya taake parhne mein asaan ho */
+    font-family: inherit; 
 }
 
 @keyframes pr {
@@ -339,6 +377,28 @@ span{
         gap: 3%;
     }
  
+.about-us p {
+    /* 1. Color: Bilkul black (#000) ki bajaye dark grey parhna asaan hota hai */
+    color: #444444; 
+
+    /* 2. Line Height: Standard 1.6 se 1.8 hoti hai taake lines aapas mein judi hui na lagen */
+    line-height: 1.6; 
+
+    /* 3. Letter Spacing: Isay hamesha thora sa (positive) rakhna chahye */
+    letter-spacing: 0.3px; 
+
+    /* 4. Font Size: 16px se 18px ke darmiyan rakhen */
+    font-size: 1.6rem; 
+
+    /* 5. Margin: Paragraphs ke darmiyan fasla */
+    /* margin-bottom: 1.5rem; */
+    
+    /* 6. Font Family: Saaf nazar aane wala font */
+    font-family: 'Poppins', sans-serif;
+    
+    /* Optional: Text ko dono taraf se barabar rakhne ke liye */
+    text-align: justify;
+}
 
 
 /* ======================== Courses============================ */
