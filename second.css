@@ -62,13 +62,12 @@ body {
     margin-top: 5rem; /* Header ke niche se shuru karne ke liye */
     
     /* Background Image Setting */
-    background: linear-gradient(rgba(0, 40, 80, 0.75), rgba(0, 40, 80, 0.75)), 
-                url('images/quran-reading.png'); /* Aapki mangi hui image */
+    /* background: linear-gradient(rgba(0, 40, 80, 0.75), rgba(0, 40, 80, 0.75)),  */
+                /* url('images/quran-reading.png'); Aapki mangi hui image */
                 
-    background-size: cover; /* Image poore section ko fill karegi */
-    background-position: center; /* Image center mein nazar aayegi */
-    background-attachment: fixed; /* Scrolling ke waqt professional look ke liye */
-    
+    background-size: cover; /*Image poore section ko fill karegi*/
+    background-position: bottom; /*Image center mein nazar aayegi */
+     background-attachment: fixed; /*Scrolling ke waqt professional look ke liye */
     display: flex;
     flex-direction: column;
     align-items: center;
