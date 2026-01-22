@@ -736,6 +736,7 @@ h3{
     z-index: 1;
     position: fixed;
     width: 40px;
+    min-width: 40px;
     height: 40px;
     bottom: 110px;
     right: 45px;
@@ -1044,7 +1045,9 @@ h3{
     
 @media (max-width: 1024px){
    
-
+.course{
+    text-align: center
+};
     #menu-icon{
         display: block;
     }
@@ -1068,6 +1071,7 @@ h3{
     display:block;
     font-size: 2rem;
     margin: 3rem 0;
+    /* padding:15rem 3% 11rem; */
 
 }
 
@@ -1094,7 +1098,7 @@ section{
     }
     .home-content h1 {
         /* H1 ka gradient mobile par bhi barqarar rakhne ke liye */
-        background: linear-gradient(90deg, #004bec, #00be20);
+        background: linear-gradient(90deg, #ffffff, #cbffd4);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: block !important; /* Agar pehle hidden tha to ab dikhay ga */
@@ -1104,13 +1108,42 @@ section{
     display: hidden;
     
 }
+
+
+
+
 .home{
-    background-image: url('images/online\ class.png');
+    padding: 0px !important;
+    /* margin: 0px;  */
+    background-image: url('images/home-background.png');
+    /* filter: blur(4px); */
+    background-color: white;
+    background-blend-mode:hard-light;
     border-image-repeat: no-repeat;
-    position: fixed;
+    background-attachment: fixed;
     height: 100vh;
     width: 100vw;
-    z-index: -2;
+    /* transform: scale(1.1);  */
+
+
+    
+}
+.home-content{
+    padding: 20% 5% 23% 5%;
+    margin-top: 13%;
+    color: white;
+      background: transparent;
+        backdrop-filter: blur(3px); 
+        /* margin: 0px; */
+        /* padding:10px; */
+}
+.home-content p, .home-content span{
+    color: #cddabdb7 !important;
+}
+.home-content i, .home-content b,
+.home-content h3{
+    color: #95ff3e !important;
+    outline-color: #95ff3e !important;
 }
 
 }
