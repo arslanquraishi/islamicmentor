@@ -1,15 +1,36 @@
-// ========== Toggle Navbar ==========
+// ========== Toggle Navbar with Staggered Links ==========
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
+let navLinks = document.querySelectorAll(".navbar a");
 
 menuIcon.onclick = () => {
+    const isOpening = !navbar.classList.contains('active');
+
+    if (isOpening) {
+        // Open navbar
+        navbar.classList.add('active');
+        navLinks.forEach((link, i) => {
+            link.style.transitionDelay = `${i * 0.08}s`; // stagger open
+        });
+    } else {
+        // Close navbar
+        navLinks.forEach((link, i) => {
+            link.style.transitionDelay = `${(navLinks.length - 1 - i) * 0.08}s`; // stagger close
+        });
+
+        // Delay removing active until animations finish
+        const totalDuration = 400 + (navLinks.length - 1) * 80; // 400ms transition + last delay
+        setTimeout(() => {
+            navbar.classList.remove('active');
+        }, totalDuration);
+    }
+
     menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
 };
 
 // ========== Scroll Section Active Links ==========
 let sections = document.querySelectorAll("section");
-let navLinks = document.querySelectorAll("header nav a");
+let navHeaderLinks = document.querySelectorAll("header nav a");
 
 window.onscroll = () => {
     let top = window.scrollY;
@@ -18,11 +39,9 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute("id");
         if (top >= offset && top < offset + height) {
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                let targetLink = document.querySelector(`header nav a[href*="${id}"]`);
-                if (targetLink) targetLink.classList.add('active');
-            });
+            navHeaderLinks.forEach(link => link.classList.remove('active'));
+            let targetLink = document.querySelector(`header nav a[href*="${id}"]`);
+            if (targetLink) targetLink.classList.add('active');
         }
     });
 
@@ -68,19 +87,16 @@ try {
     console.warn("Typed.js not loaded or not found");
 }
 
-
-
-
+// ========== Smooth Scroll for Anchors ==========
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault(); // Default jump ko roknay ke liye
+        e.preventDefault();
 
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
 
         if (targetElement) {
-            // Screen ko aram se scroll karwanay ka code
-            const headerHeight = 80; // Aapke header ki height
+            const headerHeight = 80;
             const targetPosition = targetElement.offsetTop - headerHeight;
 
             window.scrollTo({
@@ -90,9 +106,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-
-
 
 // ========== Gallery Lightbox ==========
 const lightbox = document.getElementById("lightbox");
@@ -130,9 +143,8 @@ const modalText = document.getElementById("modal-text");
 const modalBtn = document.getElementById("modal-btn");
 
 form.addEventListener("submit", function(e) {
-  e.preventDefault(); // Stop redirect
+  e.preventDefault();
 
-  // Show modal with "Sending..." state
   modal.style.display = "flex";
   modalTitle.textContent = "⏳ Sending Message...";
   modalText.textContent = "Please wait a moment.";
@@ -144,20 +156,15 @@ form.addEventListener("submit", function(e) {
   })
   .then(response => {
     if (response.ok) {
-      // Change modal to success
       modalTitle.textContent = "✅ Sent Successfully!";
       modalText.textContent = "We will get back to you soon.";
       modalBtn.style.display = "inline-block";
       form.reset();
-
-      // Auto close after 3s
       setTimeout(closeModal, 3000);
     } else {
       modalTitle.textContent = "❌ Failed!";
       modalText.textContent = "Something went wrong. Try again.";
       modalBtn.style.display = "inline-block";
-
-      // Auto close after 3s
       setTimeout(closeModal, 3000);
     }
   })
@@ -165,8 +172,6 @@ form.addEventListener("submit", function(e) {
     modalTitle.textContent = "⚠️ Error!";
     modalText.textContent = error;
     modalBtn.style.display = "inline-block";
-
-    // Auto close after 3s
     setTimeout(closeModal, 3000);
   });
 });
@@ -174,6 +179,3 @@ form.addEventListener("submit", function(e) {
 function closeModal() {
   modal.style.display = "none";
 }
-
-
-
