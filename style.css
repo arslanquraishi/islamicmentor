@@ -1136,7 +1136,7 @@ section{
     .home-content h1 {
         /* H1 ka gradient mobile par bhi barqarar rakhne ke liye */
         background: linear-gradient(90deg, #0082d8, #00cf34);
-        -webkit-background-clip: text;
+        -webkit-background-clip:text;
         -webkit-text-fill-color: transparent;
         display: block !important; /* Agar pehle hidden tha to ab dikhay ga */
     }
